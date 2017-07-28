@@ -6,11 +6,11 @@ Compose For MongoDB
 
 	{: .navgroup id="learn"}
 	index.md
-	credentials.md
+	dashboard-overview.md
+	managing-backups.md
+	{: .navgroup-end}
 
-	{: .topicgroup }
-	Related links
-		[Sample Node.js app](https://github.com/IBM-Bluemix/compose-mongodb-helloworld-nodejs)
-		[Compose Help](https://help.compose.com)
-		[Compose Articles](https://www.compose.com/articles/)
+	{: .navgroup id="howto"}
+	connecting-bluemix-app.md
+	connecting-external.md
 	{: .navgroup-end}
