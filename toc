@@ -6,11 +6,18 @@ Compose For MongoDB
 
 	{: .navgroup id="learn"}
 	index.md
-	dashboard-overview.md
-	managing-backups.md
+
+	{: .topicgroup}
+	The Service Dashboard
+		dashboard-overview.md
+		dashboard-backups.md
 	{: .navgroup-end}
 
 	{: .navgroup id="howto"}
-	connecting-bluemix-app.md
-	connecting-external.md
+	dashboard-scaling-resources.md
+
+	{: .topicgroup}
+	Connecting to Compose for MongoDB
+		connecting-bluemix-app.md
+		connecting-external.md
 	{: .navgroup-end}

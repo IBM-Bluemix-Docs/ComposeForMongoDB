@@ -10,6 +10,7 @@ lastupdated: "2017-06-17"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
+{:tip: .tip}
 
 # Connecting an external application
 {: #connecting-external-app}
@@ -17,7 +18,6 @@ lastupdated: "2017-06-17"
 There are two ways of connecting an external application to {{site.data.keyword.composeForMongoDB}}:
 
 - A **Connection String** can be used by some client libraries and contains all the information needed for other libraries to connect.
-
 - **Command Line** is a preformatted command which will invoke `mongo` with the correct parameters.
 
 You'll find both on the *Overview* page of your {{site.data.keyword.composeForPostgreSQL}} service.
@@ -34,6 +34,7 @@ For in depth application and driver support, check out the appropriate documenta
 * [C# and .NET](#c--net-mongodb-and-compose)
 
 If you're looking for languages that you do not see above, try the [MongoDB.org Driver List](http://www.mongodb.org/display/DOCS/Drivers).
+{: tip}
 
 ## Go / Golang
 
