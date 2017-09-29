@@ -20,7 +20,7 @@ There are two ways of connecting an external application to {{site.data.keyword.
 - A **Connection String** can be used by some client libraries and contains all the information needed for other libraries to connect.
 - **Command Line** is a preformatted command which will invoke `mongo` with the correct parameters.
 
-You'll find both on the *Overview* page of your {{site.data.keyword.composeForPostgreSQL}} service.
+You'll find both on the *Overview* page of your {{site.data.keyword.composeForMongoDB}} service.
 
 For in depth application and driver support, check out the appropriate documentation and communities for your specific language and the driver that your application is using. 
 
