@@ -21,7 +21,7 @@ You can create and download backups from the *Manage* page of your service dashb
 
 Daily backups of your database are automatically scheduled. To view your existing backups, navigate to the *Manage* page of your service dashboard. 
 
-![Backups](./images/managing-backups.png "A list of available backups")
+![Backups](./images/mongodb-backups-show.png "A list of available backups")
 
 ## Creating a backup on demand
 
