@@ -15,6 +15,7 @@ Compose For MongoDB
 
 	{: .navgroup id="howto"}
 	dashboard-scaling-resources.md
+	dashboard-whitelists.md
 
 	{: .topicgroup}
 	Connecting to Compose for MongoDB

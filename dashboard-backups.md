@@ -23,6 +23,10 @@ Daily backups of your database are automatically scheduled. To view your existin
 
 ![Backups](./images/mongodb-backups-show.png "A list of available backups")
 
+Click on the corresponding row to expand the options for any available backup.
+  
+![Backup Options](./images/mongodb-backups-options.png "Options for a backup.") 
+
 ## Creating a backup on demand
 
 As well as scheduled backups you can create a backup manually. To create a manual backup, navigate to the *Manage* page of your service dashboard and click *Backup now*.
@@ -42,33 +46,6 @@ To get a local restore of your databases and data:
 3. Extract the data from the backup into a new directory.
 4. Start a local MongoDB instance with the command `mongod --dbpath ./db` where './db' is the directory that contains the extracted data.
 
+## Restoring a backup
 
-## Restoring a backup to your Compose for MongoDB service
-
-To restore your {{site.data.keyword.ComposeForMongoDB}} backup to your service you need to run `mongodump` against the local database, and then use `mongorestore`, which takes the data from `mongodump` to send a series of inserts to the target database, but ignoring duplicate records. If your data is largely "write once", this is a good way to merge backup data with production.
-
-1. Make sure you have MongoDB running locally, and that it uses the {{site.data.keyword.ComposeForMongoDB}} backup.
-2. Run `mongodump` against the local database instance:
-
-  ```
-  mongodump --ssl --sslAllowInvalidCertificates --host <hostname> --port <portnumber> --db <database_name> -u <username> -p <password>
-  ```
-
-3. Run `mongorestore`. To use the data taken from mongodump, using mongorestore, you can use the local host, port number, and user access settings to get your data locally.
-
-  If you have the MongodDB Tools installed (or a local install of MongoDB), you can run `mongorestore` against your target database. The `dump/` should be in the directory relative to your current working path, and the database_name will be the database you exported from. 
-
-  ```
-  mongorestore --ssl --sslAllowInvalidCertificates --host <hostname> --port <portnumber> --db <database_name> -u <username> -p<password> dump/database_name
-  ```
-
-  In this case the username and password is a user created in that specific database. If you use the _admin_ database for user administration and permissions the command will look like this:
-
-  ```
-  mongorestore --ssl --sslAllowInvalidCertificates --host <hostname> --port <portnumber> --db <database_name> -u <username> -p<password> --authenticationDatabase admin dump/database_name
-  ```
-
-  **Note:** The lack of a space between the -p and your database password is significant.
-
-This process will not apply updates that may have happened since the backup was made, and will reinsert any since deleted documents.
-{: .tip}
+To restore a backup to a new service instance, follow the steps to view existing backups, then click in the corresponding row to expand the options for the backup you want to download. Click on the **Restore** button. A message is displayed to let you know that a restore has been initiated. The new service instance will automatically be named "mongodb-restore-[timestamp]", and appears on your dashboard when provisioning starts.
