@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016,2017
-lastupdated: "2017-10-16"
+lastupdated: "2017-10-23"
 ---
 
 {:new_window: target="_blank"}
@@ -17,7 +17,7 @@ lastupdated: "2017-10-16"
 {{site.data.keyword.composeForMongoDB_full}} uses the powerful indexing and querying, aggregation, and wide driver support of MongoDB that has made it the go-to JSON data store for many startups and enterprises. {{site.data.keyword.composeForMongoDB}} offers an easy, auto-scaling deployment system. It delivers high availability and redundancy, automated and on-demand no-stop backups, monitoring tools, integration into alert systems, performance analysis views, and much more, all in a clean, simple user interface.
 {:shortdesc}
 
-**Note:** Any Compose service instances that were provisioned before 14 September 2016 that are still active can still be used and directly accessed at [https://www.compose.com/](https://www.compose.com). Any Compose service instance that is provisioned from this point forward is directly accessed and used within your Bluemix account.
+**Note:** Any Compose service instances that were provisioned before 14 September 2016 that are still active can still be used and directly accessed at [https://www.compose.com/](https://www.compose.com). Any Compose service instance that is provisioned from this point forward is directly accessed and used within your {{site.data.keyword.Bluemix_notm}} account.
 
 ## Creating a Compose for MongoDB service instance
 
@@ -29,16 +29,20 @@ When you provision your {{site.data.keyword.composeForMongoDB}} instance you can
 
 ## Managing Compose for MongoDB
 
-You can manage your service from the service dashboard. Here you can find information about your Bluemix Compose database and how to connect to it. You can also manage your backups, allocate more resources for your service, and use whitelists to restrict access to your databases. For more information, see [Service Overview](./dashboard-overview.html), [Backups](./dashboard-backups.html), [Scaling Resources](./dashboard-scaling-resources.html), and [Whitelists](./dashboard-whitelists.html).
+You can manage your service from the service dashboard. Here you can find information about your {{site.data.keyword.Bluemix_notm}} Compose database and how to connect to it. You can also:
+- manage your backups
+- allocate more resources for your service
+- use whitelists to restrict access to your databases. 
+For more information, see [Settings](./dashboard-settings.html).
 
 ## Connecting to Compose for MongoDB
 
 You can connect to your service using the credentials that are created along with the service, or with the connection strings and command line that are provided in the *Overview* tab of your service dashboard.
 
-## Connecting a Bluemix application to Compose for MongoDB
+## Connecting a {{site.data.keyword.Bluemix_notm}} application to Compose for MongoDB
 
-To connect a Bluemix application to your service, use the credentials that are created along with the service. You can find information on how to connect a Bluemix application to a {{site.data.keyword.composeForMongoDB}} service in [Connecting a Bluemix Application](./connecting-bluemix-app.html).
+To connect a {{site.data.keyword.Bluemix_notm}} application to your service, use the credentials that are created along with the service. You can find information on how to connect a {{site.data.keyword.Bluemix_notm}} application to a {{site.data.keyword.composeForMongoDB}} service in [Connecting a {{site.data.keyword.Bluemix_notm}} Application](./connecting-bluemix-app.html).
 
-## Connecting to Compose for MongoDB from outside Bluemix
+## Connecting to Compose for MongoDB from outside {{site.data.keyword.Bluemix_notm}}
 
-If you want to connect to {{site.data.keyword.composeForMongoDB}} from outside Bluemix, you can use the provided connection strings or command line. You can find information on how to connect in [Connecting an external application](./connecting-external.html).
+If you want to connect to {{site.data.keyword.composeForMongoDB}} from outside {{site.data.keyword.Bluemix_notm}}, you can use the provided connection strings or command line. You can find information on how to connect in [Connecting an external application](./connecting-external.html).

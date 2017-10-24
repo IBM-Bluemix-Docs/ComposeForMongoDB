@@ -11,15 +11,15 @@ lastupdated: "2017-06-17"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Connecting a Bluemix application
+# Connecting a {{site.data.keyword.Bluemix_notm}} application
 
-To connect a Bluemix application to your service, use the service credentials that are created when the service is provisioned. The sample app demonstrates how to use Node.js to connect to a {{site.data.keyword.composeForMongoDB}} service using the provided credentials, and how to create a database and read from and write to the database.
+To connect a {{site.data.keyword.Bluemix_notm}} application to your service, use the service credentials that are created when the service is provisioned. The sample app demonstrates how to use Node.js to connect to a {{site.data.keyword.composeForMongoDB}} service using the provided credentials, and how to create a database and read from and write to the database.
 
 ## Connecting using the 'Hello World' sample app
 
 The [compose-mongodb-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-mongodb-helloworld-nodejs) sample app demonstrates how to use Node.js to connect to a {{site.data.keyword.composeForMongoDB}} service using the provided credentials. The application creates, reads from, and writes to a database.
 
-Download the sample app and follow the instructions in the readme file. Then, in your application details page in Bluemix, click **View APP** to view the contents of the *examples* table.
+Download the sample app and follow the instructions in the readme file. Then, in your application details page in {{site.data.keyword.Bluemix_notm}}, click **View APP** to view the contents of the *examples* table.
 
 ## Available credentials
 
