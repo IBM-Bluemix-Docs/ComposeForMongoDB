@@ -15,7 +15,7 @@ lastupdated: "2017-06-17"
 # Connecting an external application
 {: #connecting-external-app}
 
-There are two ways of connecting an external application to {{site.data.keyword.composeForMongoDB}}:
+There are two ways of connecting an external application to {{site.data.keyword.composeForMongoDB_full}}:
 
 - A **Connection String** can be used by some client libraries and contains all the information needed for other libraries to connect.
 - **Command Line** is a preformatted command which will invoke `mongo` with the correct parameters.
@@ -24,16 +24,7 @@ You'll find both on the *Overview* page of your {{site.data.keyword.composeForMo
 
 For in depth application and driver support, check out the appropriate documentation and communities for your specific language and the driver that your application is using. 
 
-* [Go](#go--golang-mongodb-and-compose)
-* [NodeJS Native](#nodejs--native)
-* [Mongoose + Node](#mongoose-node-and-compose)
-* [R](#r-mongodb-and-compose)
-* [Ruby](#ruby-mongodb-and-compose)
-* [Python](#python-mongodb-and-compose)
-* [PHP](#php-mongodb-and-compose)
-* [C# and .NET](#c--net-mongodb-and-compose)
-
-If you're looking for languages that you do not see above, try the [MongoDB.org Driver List](http://www.mongodb.org/display/DOCS/Drivers).
+If you're looking for languages that are not see covered here, try the [MongoDB.org Driver List](http://www.mongodb.org/display/DOCS/Drivers).
 {: tip}
 
 ## Go / Golang

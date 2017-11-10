@@ -15,7 +15,7 @@ lastupdated: "2017-09-07"
 # Backups
 {: #backups}
 
-You can create and download backups from the *Manage* page of your service dashboard. Both scheduled and manual backups are available.
+You can create and download backups from the *Manage* page of your {{site.data.keyword.composeForMongoDB_full}} service dashboard. Both scheduled and manual backups are available.
 
 ## Viewing existing backups
 
