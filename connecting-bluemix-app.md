@@ -13,7 +13,7 @@ lastupdated: "2017-06-17"
 
 # Connecting an {{site.data.keyword.cloud_notm}} application
 
-To connect an {{site.data.keyword.cloud}} application to your service, use the service credentials that are created when the service is provisioned. The sample app demonstrates how to use Node.js to connect to a {{site.data.keyword.composeForMongoDB_full}} service using the provided credentials, and how to create a database and read from and write to the database.
+To connect an {{site.data.keyword.cloud}} application to your service, use the service credentials that are created when the service is provisioned. The sample app demonstrates how to use Node.js to connect to an {{site.data.keyword.composeForMongoDB_full}} service using the provided credentials, and how to create a database and read from and write to the database.
 
 ## Connecting using the 'Hello World' sample app
 
