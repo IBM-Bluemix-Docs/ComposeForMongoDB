@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016,2017
-lastupdated: "2017-10-23"
+lastupdated: "2017-11-15"
 ---
 
 {:new_window: target="_blank"}
@@ -27,7 +27,7 @@ When you create an instance of the service, ensure that you choose both a name f
 
 When you provision your {{site.data.keyword.composeForMongoDB}} instance you can choose the *Standard* or *Enterprise* plans. With the *Enterprise* plan, you can provision your {{site.data.keyword.composeForMongoDB}} instance into an available {{site.data.keyword.composeEnterprise}} cluster. {{site.data.keyword.composeEnterprise}} provides the security and isolation required by enterprise compliance and uses dedicated networking to ensure the performance of the deployed databases. See the [Compose Enterprise documentation](../ComposeEnterprise/index.html) for more details.
 
-## Managing Compose for MongoDB
+## Managing {{site.data.keyword.composeForMongoDB}}
 
 You can manage your service from the service dashboard. Here you can find information about your {{site.data.keyword.cloud_notm}} Compose database and how to connect to it. You can also:
 - manage your backups
@@ -35,14 +35,18 @@ You can manage your service from the service dashboard. Here you can find inform
 - use whitelists to restrict access to your databases. 
 For more information, see [Settings](./dashboard-settings.html).
 
-## Connecting to Compose for MongoDB
+## Connecting to {{site.data.keyword.composeForMongoDB}}
 
 You can connect to your service using the credentials that are created along with the service, or with the connection strings and command line that are provided in the *Overview* tab of your service dashboard.
 
-## Connecting an {{site.data.keyword.cloud_notm}} application to Compose for MongoDB
+## Connecting an {{site.data.keyword.cloud_notm}} application to {{site.data.keyword.composeForMongoDB}}
 
 To connect an {{site.data.keyword.cloud_notm}} application to your service, use the credentials that are created along with the service. You can find information on how to connect an {{site.data.keyword.cloud_notm}} application to a {{site.data.keyword.composeForMongoDB}} service in [Connecting an {{site.data.keyword.cloud_notm}} Application](./connecting-bluemix-app.html).
 
-## Connecting to Compose for MongoDB from outside {{site.data.keyword.cloud_notm}}
+## Connecting to {{site.data.keyword.composeForMongoDB}} from outside {{site.data.keyword.cloud_notm}}
 
 If you want to connect to {{site.data.keyword.composeForMongoDB}} from outside {{site.data.keyword.cloud_notm}}, you can use the provided connection strings or command line. You can find information on how to connect in [Connecting an external application](./connecting-external.html).
+
+## Creating a web application using MEAN stack
+
+You can use {{site.data.keyword.composeForMongoDB}} as part of a MEAN stack to create a web application. Follow the steps in the [Modern Web Application using MEAN stack](../docs/tutorials/mean-stack.html#modern-web-application-using-mean-stack) tutorial to create a web application composed of a Mongo DB, Express web framework, Angular front end framework and a Node.js runtime.
