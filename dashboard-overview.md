@@ -2,7 +2,7 @@
 
 Copyright:
   Years: 2017
-lastupdated: "2017-11-15"
+lastupdated: "2017-11-20"
 ---
 
 {:new_window: target="_blank"}
@@ -33,6 +33,9 @@ An internal identifier for the service.
 
 The size of your database and the amount of storage provided by your service plan.
 
+## Current Jobs
+
+Making administrative changes to your service (such as scaling, or taking a manual backup) starts a job. While a job is running, the _Current Jobs_ panel appears on the _Overview_ page, showing the job name and a progress bar. When the job is complete, the _Current Jobs_ panel no longer appears on the _Overview_ page.
 
 ## Connection Strings
 

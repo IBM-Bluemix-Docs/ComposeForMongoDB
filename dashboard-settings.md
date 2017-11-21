@@ -2,7 +2,7 @@
 
 Copyright:
   Years: 2017
-lastupdated: "2017-10-23"
+lastupdated: "2017-11-20"
 ---
 
 {:new_window: target="_blank"}
@@ -34,11 +34,9 @@ If your service needs additional storage, or you want to reduce the amount of st
   ![The Scale Resources page](./images/mongodb-scale-show.png "The Scale Resources page")
 
 3. Adjust the slider to raise or lower the storage allocated to the {{site.data.keyword.composeForMongoDB}} service. Move the slider to the left to reduce the amount of storage, or move it to the right to increase the storage.
-4. Click **Scale Deployment** to trigger the rescaling and return to the dashboard overview. A 'Scaling initiated' message appears at the top of the page to let you know the rescaling is in progress and the _Deployment Details_ pane also shows the scaling in progress.
-
-  ![Scaling in progress](./images/scaling-in-progress.png "The Deployment Details pane, showing that database scaling is in progress")
+4. Click **Scale Deployment** to trigger the rescaling and return to the dashboard overview. 
   
-  When the scaling is complete the _Deployment Details_ pane updates to show the current usage and the new value for the available storage.
+When the scaling is complete the _Deployment Details_ pane updates to show the current usage and the new value for the available storage.
 
 
 ## Whitelists
