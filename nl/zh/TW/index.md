@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016,2017
-lastupdated: "2017-04-27"
+lastupdated: "2017-10-23"
 ---
 
 {:new_window: target="_blank"}
@@ -17,16 +17,31 @@ lastupdated: "2017-04-27"
 {{site.data.keyword.composeForMongoDB_full}} 使用 MongoDB 的強大編製索引及查詢、聚集及廣泛驅動程式支援，讓 MongoDB 成為許多新創事業和企業的首選 JSON 資料儲存庫。{{site.data.keyword.composeForMongoDB}} 提供簡單的自動調整部署系統。它提供高可用性及備援、自動化及隨需應變持續備份、監視工具、整合至警示系統、效能分析視圖等，全部都是透過全新的簡單使用者介面完成。
 {:shortdesc}
 
-**附註：**在 2016 年 9 月 14 日之前佈建且仍然作用中的任何 Compose 服務實例，仍然可以使用，而且可以在 [https://www.compose.com/](https://www.compose.com) 直接存取。在 Bluemix 帳戶內，可以直接存取及使用從此點往前佈建的任何 Compose 服務實例。
+**附註：**在 2016 年 9 月 14 日之前佈建且仍然作用中的任何 Compose 服務實例，仍然可以使用，而且可以在 [https://www.compose.com/](https://www.compose.com) 直接存取。在 {{site.data.keyword.cloud}} 帳戶內，可以直接存取及使用從此點往前佈建的任何 Compose 服務實例。
 
-請完成下列步驟，以開始使用 {{site.data.keyword.composeForMongoDB}}：
+## 建立 Compose for MongoDB 服務實例
 
-1. [建立 {{site.data.keyword.composeForMongoDB}} 實例](https://console.ng.bluemix.net/catalog/services/compose-for-mongodb/)。
+[建立 {{site.data.keyword.composeForMongoDB}} 實例](https://console.ng.bluemix.net/catalog/services/compose-for-mongodb/)。
 
-   當您建立服務的實例時，請確保要選擇服務名稱及認證名稱。請維持服務不連結；稍後使用佈建服務時所提供的認證，即可將應用程式連接至服務。*可用的認證* 小節中會列出各種認證值。
+當您建立服務的實例時，請確保要選擇服務名稱及認證名稱。請維持服務不連結；稍後使用佈建服務時所提供的認證，即可將應用程式連接至服務。*可用的認證* 小節中會列出各種認證值。
 
-2. 連接至 {{site.data.keyword.composeForMongoDB}} 服務。
+當您佈建 {{site.data.keyword.composeForMongoDB}} 實例時，可以選擇*標準* 或*企業* 方案。使用*企業* 方案，您可以將 {{site.data.keyword.composeForMongoDB}} 實例佈建到可用的 {{site.data.keyword.composeEnterprise}} 叢集。{{site.data.keyword.composeEnterprise}} 提供企業相符性所需的安全和隔離，並使用專用網路來確保已部署之資料庫的效能。如需詳細資料，請參閱 [Compose Enterprise 文件](../ComposeEnterprise/index.html)。
 
-   若要將應用程式連接至服務，請使用與服務一起建立的[認證](./credentials.html)。範例應用程式會示範如何使用 Node.js 來連接至 {{site.data.keyword.composeForMongoDB}} 服務。
+## 管理 Compose for MongoDB
 
-   請下載 [compose-mongodb-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-mongodb-helloworld-nodejs) 範例應用程式，並遵循 Readme 檔中的指示。然後，在 Bluemix 的應用程式詳細資料頁面中，按一下**檢視應用程式**。
+您可以從服務儀表板來管理服務。在這裡，您可以找到 {{site.data.keyword.cloud_notm}} Compose 資料庫的相關資訊，以及連接方式。您也可以：
+- 管理備份
+- 為您的服務配置更多資源
+- 使用白名單來限制對資料庫的存取權。如需相關資訊，請參閱[設定](./dashboard-settings.html)。
+
+## 連接至 Compose for MongoDB
+
+您可以使用與服務一起建立的認證，或使用服務儀表板的*概觀* 標籤中所提供的連線字串及指令行，來連接至服務。
+
+## 將 {{site.data.keyword.cloud_notm}} 應用程式連接至 Compose for MongoDB
+
+若要將 {{site.data.keyword.cloud_notm}} 應用程式連接至服務，請使用與服務一起建立的認證。您可以在[連接 {{site.data.keyword.cloud_notm}} 應用程式](./connecting-bluemix-app.html)中，找到如何將 {{site.data.keyword.cloud_notm}} 應用程式連接至 {{site.data.keyword.composeForMongoDB}} 服務的資訊。
+
+## 從 {{site.data.keyword.cloud_notm}} 之外連接至 Compose for MongoDB
+
+如果您想要從 {{site.data.keyword.cloud_notm}} 之外連接至 {{site.data.keyword.composeForMongoDB}}，則可以使用所提供的連線字串或指令行。您可以在[連接外部應用程式](./connecting-external.html)中，找到如何連接的相關資訊。

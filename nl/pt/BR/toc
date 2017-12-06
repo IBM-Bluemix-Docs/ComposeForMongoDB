@@ -6,10 +6,18 @@ Compose For MongoDB
 
 	{: .navgroup id="learn"}
 	index.md
-	credentials.md
 
-	{: .topicgroup }
-	Links relacionados
-		[App Node.js de amostra](https://github.com/IBM-Bluemix/compose-mongodb-helloworld-nodejs)
-		[Ajuda do Compose](https://help.compose.com)
-		[Artigos sobre o Compose](https://www.compose.com/articles/) 	{: .navgroup-end}
+	{: .topicgroup}
+	O Painel de serviço
+	   	dashboard-overview.md
+	 	dashboard-backups.md
+	 	dashboard-settings.md
+	{: .navgroup-end}
+
+	{: .navgroup id="howto"}
+	{: .topicgroup}
+	Conectando-se ao Compose for MongoDB
+		connecting-bluemix-app.md
+		connecting-external.md
+		connecting-robo3T.md
+	{: .navgroup-end}
