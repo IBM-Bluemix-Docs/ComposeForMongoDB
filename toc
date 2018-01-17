@@ -6,6 +6,7 @@ Compose For MongoDB
 
 	{: .navgroup id="learn"}
 	index.md
+	pricing.md
 
 	{: .topicgroup}
 	The Service Dashboard
