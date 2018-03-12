@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016,2017
+  years: 2016,2018
 lastupdated: "2017-11-15"
 ---
 
@@ -11,19 +11,19 @@ lastupdated: "2017-11-15"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Getting started with Compose for MongoDB
-{: #getting-started-with-compose-for-mongodb}
+# About {{site.data.keyword.composeForMongoDB}}
+{: #about-compose-for-mongodb}
 
 {{site.data.keyword.composeForMongoDB_full}} uses the powerful indexing and querying, aggregation, and wide driver support of MongoDB that has made it the go-to JSON data store for many startups and enterprises. {{site.data.keyword.composeForMongoDB}} offers an easy, auto-scaling deployment system. It delivers high availability and redundancy, automated and on-demand no-stop backups, monitoring tools, integration into alert systems, performance analysis views, and much more, all in a clean, simple user interface.
 {:shortdesc}
 
 **Note:** Any Compose service instances that were provisioned before 14 September 2016 that are still active can still be used and directly accessed at [https://www.compose.com/](https://www.compose.com). Any Compose service instance that is provisioned from this point forward is directly accessed and used within your {{site.data.keyword.cloud}} account.
 
-## Creating a Compose for MongoDB service instance
+## Creating a {{site.data.keyword.composeForMongoDB}} service instance
 
-[Create a {{site.data.keyword.composeForMongoDB}} instance](https://console.ng.bluemix.net/catalog/services/compose-for-mongodb/).
+You can create a {{site.data.keyword.composeForMongoDB}} service from the [{{site.data.keyword.composeForMongoDB}} page](https://console.{DomainName}/catalog/services/compose-for-mongodb/) in the {{site.data.keyword.cloud_notm}} catalog.
 
-When you create an instance of the service, ensure that you choose both a name for your service and a credential name. Leave the service unbound; you can connect an application to your service later by using the credentials that are provided when the service is provisioned.  The various credential values are listed in the *Available credentials* section.
+Choose a service name, and a region, organization and space to provision the service in. You can use the **Select a database version** field to choose from the available database versions.
 
 When you provision your {{site.data.keyword.composeForMongoDB}} instance you can choose the *Standard* or *Enterprise* plans. With the *Enterprise* plan, you can provision your {{site.data.keyword.composeForMongoDB}} instance into an available {{site.data.keyword.composeEnterprise}} cluster. {{site.data.keyword.composeEnterprise}} provides the security and isolation required by enterprise compliance and uses dedicated networking to ensure the performance of the deployed databases. See the [Compose Enterprise documentation](../ComposeEnterprise/index.html) for more details.
 

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016,2017
+  years: 2016,2018
 lastupdated: "2017-06-17"
 ---
 
@@ -17,7 +17,7 @@ To connect an {{site.data.keyword.cloud}} application to your service, use the s
 
 ## Connecting using the 'Hello World' sample app
 
-The [compose-mongodb-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-mongodb-helloworld-nodejs) sample app demonstrates how to use Node.js to connect to a {{site.data.keyword.composeForMongoDB}} service using the provided credentials. The application creates, reads from, and writes to a database.
+The [compose-mongodb-helloworld-nodejs](https://github.com/IBM-Cloud/compose-mongodb-helloworld-nodejs) sample app demonstrates how to use Node.js to connect to a {{site.data.keyword.composeForMongoDB}} service using the provided credentials. The application creates, reads from, and writes to a database.
 
 Download the sample app and follow the instructions in the readme file. Then, in your application details page in {{site.data.keyword.cloud_notm}}, click **View APP** to view the contents of the *examples* table.
 
