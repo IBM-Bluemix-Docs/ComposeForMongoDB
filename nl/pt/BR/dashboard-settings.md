@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  Years: 2017
-lastupdated: "2017-10-23"
+  years: 2017,2018
+lastupdated: "2017-11-20"
 ---
 
 {:new_window: target="_blank"}
@@ -34,11 +34,9 @@ Se o seu serviço precisa de armazenamento adicional, ou você deseja reduzir a 
   ![The Scale Resources page](./images/mongodb-scale-show.png "The Scale Resources page")
 
 3. Ajuste a régua de controle para levantar ou abaixar o armazenamento alocado para o serviço {{site.data.keyword.composeForMongoDB}}. Mova a régua de controle para a esquerda para reduzir a quantia de armazenamento ou mova-a para a direita para aumentar o armazenamento.
-4. Clique em **Escalar implementação** para acionar o novo ajuste de escala e retorne para a visão geral do painel. Uma mensagem 'Ajuste de escala iniciado' aparece na parte superior da página para permitir que você saiba que o novo ajuste de escala está em andamento e a área de janela _Detalhes da implementação_ também mostra o ajuste de escala em andamento.
-
-  ![Ajuste de escala em andamento](./images/scaling-in-progress.png "A área de janela Detalhes da implementação, mostrando que o ajuste de escala do banco de dados está em andamento")
+4. Clique em **Escalar implementação** para acionar o novo ajuste de escala e retorne para a visão geral do painel. 
   
-  Quando o ajuste de escala for concluído, a área de janela _Detalhes da implementação_ será atualizada para mostrar o uso atual e o novo valor para o armazenamento disponível.
+Quando o ajuste de escala for concluído, a área de janela _Detalhes da implementação_ será atualizada para mostrar o uso atual e o novo valor para o armazenamento disponível.
 
 
 ## Listas de desbloqueio

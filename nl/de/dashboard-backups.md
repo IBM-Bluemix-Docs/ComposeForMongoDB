@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017,2018
 lastupdated: "2017-09-07"
 ---
 
@@ -15,7 +15,17 @@ lastupdated: "2017-09-07"
 # Sicherungen
 {: #backups}
 
-Sie können Sicherungen erstellen und über die Seite *Verwalten* Ihres {{site.data.keyword.composeForMongoDB_full}}-Service-Dashboards herunterladen. Es sind sowohl geplante als auch manuelle Sicherungen verfügbar.
+Sie können Sicherungen erstellen und über die Registerkarte _Sicherungen_ der Seite _Verwalten_ Ihres Service-Dashboards herunterladen. Dabei sind tägliche, wöchentliche und monatliche Sicherungen sowie Sicherungen nach Bedarf verfügbar. Die Aufbewahrungszeit richtet sich nach folgendem Zeitplan:
+
+Sicherungstyp|Aufbewahrungszeitplan
+----------|-----------
+Täglich|Tägliche Sicherungen werden 7 Tage aufbewahrt
+Wöchentlich|Wöchentliche Sicherungen werden 4 Wochen aufbewahrt
+Monatlich|Monatliche Sicherungen werden 3 Monate aufbewahrt
+Bei Bedarf|Es wird eine bei Bedarf erstellte Sicherung aufbewahrt. Dabei ist die aufbewahrte Sicherung immer die letzte bei Bedarf erstellte Sicherung.
+{: caption="Tabelle 1. Aufbewahrungszeitplan für Sicherungen" caption-side="top"}
+
+Sicherungszeitpläne und Aufbewahrungsrichtlinien sind festgelegt. Falls Sie mehr Sicherungen benötigen als die, die im Aufbewahrungszeitplan vorgesehen sind, sollten Sie Sicherungen herunterladen und Sicherungsarchive gemäß Ihren Geschäftsanforderungen aufbewahren.
 
 ## Vorhandene Sicherungen anzeigen
 
@@ -39,7 +49,7 @@ Navigieren Sie zum Herunterladen einer Sicherung zu der Seite *Verwalten* Ihres 
 
 Sie können mit Ihrer {{site.data.keyword.composeForMongoDB}}-Sicherung eine lokale Kopie Ihrer Datenbank ausführen.
 
-Gehen Sie wie folgt vor, um eine lokale Wiederherstellung Ihrer Datenbanken und Daten durchzuführen: 
+Gehen Sie wie folgt vor, um eine lokale Wiederherstellung Ihrer Datenbanken und Daten durchzuführen:
 
 1. Laden Sie eine Sicherung aus Ihrem Service-Dashboard herunter.
 2. Installieren Sie MongoDB und die MongoDB-Tools lokal.

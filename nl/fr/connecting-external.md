@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017,2018
 lastupdated: "2017-06-17"
 ---
 
@@ -29,7 +29,7 @@ Pour des langues qui ne figurent pas ici, voir la [Liste des pilotes MongoDB.org
 
 ## Go / Golang
 
-Comme dans les autres exemples, ce document intègre une variable d'environnement nommée `MONGODB_URL` à votre chaîne de connexion. Pour définir cette variable, exécutez la ligne suivante dans le shell :
+Comme dans les autres exemples, ce document intègre une variable d'environnement nommée `MONGODB_URL` à votre chaîne de connexion.  Pour définir cette variable, exécutez la ligne suivante dans le shell :
 
 ```shell
 export MONGODB_URL="mongodb://user:pass@server.compose.io/db_name"
@@ -99,6 +99,7 @@ func main() {
 
 ```
 La ligne qui supprime "?ssl=true" de l'URI (19) est nécessaire car mgo générera une erreur si vous entrez le paramètre standard pour les connexions SSL/TLS. La connexion et la vérification du certificat public SSL s'effectuent pratiquement de la même manière, mais certaines étapes supplémentaires sont requises pour charger le certificat, ici, à partir d'un fichier "servercert.crt" :
+
 ```go
 package main
 
@@ -359,6 +360,7 @@ mongoose.connect(process.env.MONGODB_URL, options);
 MONGODB_URL="mongodb://user:pass@server.compose.io/db_name"
 ```
 Si vous utilisez Ruby (ainsi que des infrastructures telles que Ruby on Rails, Sinatra, etc.), vous pouvez commencer par installer le gem `mongo` (2.x). Vous pouvez vous en passer, mais vous aurez besoin de [RubyGems](http://rubygems.org). Si vous utilisez une version antérieure à 1.9 de Ruby, vous devrez ajouter `require 'rubygems'` au début des exemples.
+
  Sans utiliser un certificat, le code est simplement :
 ```ruby
 require 'mongo'
@@ -573,7 +575,7 @@ namespace mongodb_csharp.Models
   }
 }
 ```
-Créons maintenant notre contrôleur de développeur.
+Créons maintenant notre contrôleur de développeur. 
 
 Dans cet exemple, nommons-le DeveloperController. Vous pouvez désélectionner la case "Add action methods for Create, Update and Delete Scenarios" car nous ne traiterons pas cette fonctionnalité dans le guide d'initiation.
 
@@ -626,7 +628,7 @@ namespace mongodb_csharp.Controllers
     }
 }
 ```
-Comme vous le voyez, j'ai séparé l'appel de la base de données dans une méthode distincte, répertoriée ci-dessous. Ici, nous utilisons la méthode `MongoServer.Create` pour initialiser une connexion au serveur Compose en nous servant de la chaîne de connexion issue du fichier web.config. Nous pouvons maintenant appeler `GetDatabase` pour obtenir notre instance `MongoDatabase`.
+Comme vous le voyez, j'ai séparé l'appel de la base de données dans une méthode distincte, répertoriée ci-dessous. Ici, nous utilisons la méthode `MongoServer.Create` pour initialiser une connexion au serveur Compose en nous servant de la chaîne de connexion issue du fichier web.config. Nous pouvons maintenant appeler `GetDatabase` pour obtenir notre instance `MongoDatabase`. 
 
 Dans ce cas, le nom de ma base de données est **t2**. 
 

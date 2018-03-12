@@ -1,7 +1,7 @@
 ---
 
-Copyright:
-  Years: 2017
+copyright:
+  years: 2017,2018
 lastupdated: "2017-06-17"
 ---
 
@@ -29,7 +29,7 @@ Se você está procurando linguagens que não são cobertas aqui, tente a [Lista
 
 ## Go / Golang
 
-Como nos outros exemplos, este documento assume uma variável ambiental chamada `MONGODB_URL` com sua sequência de conexões. Para configurar essa variável, execute o seguinte no shell:
+Como nos outros exemplos, este documento assume uma variável ambiental chamada `MONGODB_URL` com sua sequência de conexões.  Para configurar essa variável, execute o seguinte no shell:
 
 ```shell
 export MONGODB_URL="mongodb://user:pass@server.compose.io/db_name"
@@ -521,7 +521,7 @@ namespace mongodb_csharp.Models
   }
 }
 ```
-Agora vamos criar o nosso DeveloperController.
+Agora vamos criar o nosso DeveloperController. 
 
 Neste exemplo, vamos nomeá-lo DeveloperController. É possível desmarcar a caixa para "Incluir métodos de ação para Criar, Atualizar e Excluir Cenários", pois não cobriremos essa funcionalidade no guia Introdução.
 
@@ -565,7 +565,7 @@ namespace mongodb_csharp.Controllers
     }
 }
 ```
-Como é possível ver, a chamada de banco de dados foi dividida em um método separado, que é listado abaixo. Aqui, utilizamos o método `MongoServer.Create` para inicializar uma conexão com o servidor Compose usando nossa sequência de conexões do web.config. Agora podemos chamar `GetDatabase` para obter a instância `MongoDatabase`.
+Como é possível ver, a chamada de banco de dados foi dividida em um método separado, que é listado abaixo. Aqui, utilizamos o método `MongoServer.Create` para inicializar uma conexão com o servidor Compose usando nossa sequência de conexões do web.config. Agora podemos chamar `GetDatabase` para obter a instância `MongoDatabase`. 
 
 Nesse caso, meu nome do banco de dados é **t2**. 
 

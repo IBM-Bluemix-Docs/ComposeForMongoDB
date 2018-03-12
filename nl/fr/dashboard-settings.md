@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  Years: 2017
-lastupdated: "2017-10-23"
+  years: 2017,2018
+lastupdated: "2017-11-20"
 ---
 
 {:new_window: target="_blank"}
@@ -34,11 +34,9 @@ Si votre service a besoin de plus d'espace de stokage, ou si vous voulez limiter
   ![Page Scale Resources](./images/mongodb-scale-show.png "Page Scale Resources")
 
 3. Déplacez le curseur sur la règle pour augmenter ou diminuer la quantité de stockage allouée au service {{site.data.keyword.composeForMongoDB}}. Déplacez-le vers la gauche pour diminuer la quantité de stockage ou vers la droite pour l'augmenter.
-4. Cliquez sur **Scale Deployment** pour lancer le processus de mise à l'échelle et revenir dans la vue d'ensemble du tableau de bord. Un message 'Scaling initiated' s'affiche en haut de la page pour vous indiquer que la remise à l'échelle est en cours et le panneau _Deployment Details_ affiche également la progression de l'opération.
-
-  ![Mise à l'échelle en cours](./images/scaling-in-progress.png "Panneau Deployment Details affichant la progression d'une mise à l'échelle")
+4. Cliquez sur **Scale Deployment** pour lancer le processus de mise à l'échelle et revenir dans la vue d'ensemble du tableau de bord. 
   
-  Une fois la mise à l'échelle terminée, le panneau _Deployment Details_ est actualisé pour afficher l'utilisation actuelle et la nouvelle valeur de stockage disponible.
+Une fois la mise à l'échelle terminée, le panneau _Deployment Details_ est actualisé pour afficher l'utilisation actuelle et la nouvelle valeur de stockage disponible.
 
 
 ## Listes blanches

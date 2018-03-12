@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017,2018
 lastupdated: "2017-06-17"
 ---
 
@@ -99,6 +99,8 @@ func main() {
 
 ```
 需要从 URI (19) 除去“?ssl=true”的行，因为在为 SSL/TLS 连接提供标准参数时，mgo 目前会发生错误。要连接并验证服务器的 SSL 公用证书本质上是相同的，但需要执行一些额外的步骤，以从文件“servercert.crt”（此案例）装入证书：
+
+
 
 ```go
 package main
@@ -304,6 +306,8 @@ mongodb.Db.connect process.env.COMPOSE_URL, (error, client)->
 ```
 这样应该就可以了！
 
+
+
 ## Mongoose 和 Node
 
 **快速注释：**在此示例中，假定您的 Compose 连接字符串在环境变量 `MONGODB_URL` 中设置，如下所示：
@@ -361,6 +365,8 @@ MONGODB_URL="mongodb://user:pass@server.compose.io/db_name"
 ```
 如果您使用的 Ruby（与诸如 Ruby on Rails、Sinatra 等框架配合使用），那么可以通过安装 `mongo` (2.x) gem 来启动。它应该是理所当然的，但您需要 [RubyGems](http://rubygems.org)。如果您使用的是 1.9 之前的 Ruby，那么需要在示例的开头添加 `require 'rubygem'`。
 
+
+
  在不使用证书的情况下，代码很简单：
 ```ruby
 require 'mongo'
@@ -380,6 +386,8 @@ puts collections # ["coll1", "coll2", ...]
 ```
 Logger 行将禁用驱动程序的调试消息（有很多）。如果您想要看到更多消息，请将其注释掉。
 
+
+
 要使用证书进行连接，代码类似，但连接时需要更多选项设置：
 ```ruby
 require 'mongo'
@@ -398,6 +406,8 @@ collections = db.collection_names
 puts collections # ["coll1", "coll2", ...]
 ```
 请注意，`servercert.crt` 文件名被传递两次以表示该证书也是它自己的认证中心。
+
+
 
 ## Python
 
@@ -429,6 +439,8 @@ db = client.get_default_database()
 print db.collection_names()
 ```
 然后，您应该就可顺利进行了。
+
+
 
 ## PHP、MongoDB 和 Compose
 
@@ -539,6 +551,8 @@ export MONGODB_URL="mongodb://user:pass@server.compose.io/db_name"
 ```
 当然，**您的 mongo uri** 应该替换为在 Web 界面中提供给您的实际 Compose URI。您可以通过执行以下操作来实现此目标：
 
+
+
 1. 登录到 [Compose](https://www.compose.io)
 2. 单击要连接到的数据库的端口号
 3. 复制或记下提供的 URI。
@@ -577,6 +591,8 @@ namespace mongodb_csharp.Models
 }
 ```
 现在，让我们创建 DeveloperController。
+
+ 
 
 在此示例中，让我们将其命名为 DeveloperController。您可以取消选中“为创建、更新和删除方案添加操作方法”框，因为我们不会在“入门指南”中涵盖此功能。
 
@@ -631,6 +647,8 @@ namespace mongodb_csharp.Controllers
 ```
 如您所见，我将数据库调用分成了单独的方法，如下所列。在这里，我们利用 `MongoServer.Create` 方法，通过 web.config 中的连接字符串来初始化与 Compose 服务器的连接。现在，我们可以调用 `GetDatabase` 以获取 `MongoDatabase` 实例。
 
+ 
+
 在此情况下，我的数据库名称为 **t2**。 
 
 有关这些方法的更多信息，请参阅 [CSharp 驱动程序教程](http://www.mongodb.org/display/DOCS/CSharp+Driver+Tutorial#CSharpDriverTutorial-Createmethod)。
@@ -664,6 +682,8 @@ public ActionResult Index()
 }
 ```
 成功！
+
+
 
 现在，我们已具有数据库的连接和将内容交付到视图的方法。我们现在需要做的就是混合我们的模型并将其传递到视图中。
 

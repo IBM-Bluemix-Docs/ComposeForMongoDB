@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017,2018
 lastupdated: "2017-06-17"
 ---
 
@@ -99,6 +99,8 @@ func main() {
 
 ```
 如果為 SSL/TLS 連線提供標準參數，則需要從 URI (19) 移除 "?ssl=true" 的這一行，因為 mgo 目前發生錯誤。若要連接並驗證伺服器的「SSL 公用憑證」本質上是否相同，但在此情況下，需要一些額外步驟，才能從 "servercert.crt" 檔案中載入憑證：
+
+
 ```go
 package main
 
@@ -303,6 +305,8 @@ mongodb.Db.connect process.env.COMPOSE_URL, (error, client)->
 ```
 這應該會奏效！
 
+
+
 ## Mongose 及 Node
 
 **快速附註：**在此範例中，我們假設您的 Compose 連線字串設定在環境變數 `MONGODB_URL` 中，如下所示：
@@ -360,6 +364,8 @@ MONGODB_URL="mongodb://user:pass@server.compose.io/db_name"
 ```
 如果您是使用 Ruby（以及如 Ruby on Rails、Sinatra 等架構），則可以藉由安裝 `mongo` (2.x) gem 來開始。它應該不用說，但您將需要 [RubyGems](http://rubygems.org)。如果您使用的是 1.9 版之前的 Ruby，則需要在範例的開頭新增 `require 'rubygems'`。
 
+
+
  若沒有使用憑證，程式碼只是：
 ```ruby
 require 'mongo'
@@ -379,6 +385,8 @@ puts collections # ["coll1", "coll2", ...]
 ```
 「日誌程式」行會忽略驅動程式的除錯訊息（有許多除錯訊息）。如果想要看到更多，請將其註銷。
 
+
+
 若要使用憑證進行連接，程式碼類似，但在連接時需要更多的選項設定：
 ```ruby
 require 'mongo'
@@ -397,6 +405,8 @@ collections = db.collection_names
 puts collections # ["coll1", "coll2", ...]
 ```
 請注意，會傳遞 `servercert.crt` 檔名兩次，以表示憑證也是其本身的權限。
+
+
 
 ## Python
 
@@ -428,6 +438,8 @@ db = client.get_default_database()
 print db.collection_names()
 ```
 然後，應該一切順利。
+
+
 
 ## PHP、MongoDB 及 Compose
 
@@ -538,6 +550,8 @@ export MONGODB_URL="mongodb://user:pass@server.compose.io/db_name"
 ```
 當然，**your mongo uri** 應該取代為 Web 介面中提供給您的實際 Compose URI。您可以執行下列動作來達成此目的：
 
+
+
 1. 登入 [Compose](https://www.compose.io)
 2. 按一下您要連接之資料庫的埠號
 3. 複製或記下所提供的 URI。
@@ -576,6 +590,8 @@ namespace mongodb_csharp.Models
 }
 ```
 現在讓我們建立 DeveloperController。
+
+ 
 
 在此範例中，讓我們將其命名為 DeveloperController。您可以取消勾選「新增用於建立、更新及刪除實務範例的動作方法」的方框，因為我們不會在「入門」手冊中涵蓋此功能。
 
@@ -630,6 +646,8 @@ namespace mongodb_csharp.Controllers
 ```
 如您所見，我已將資料庫呼叫細分為個別方法，列示於下。在這裡，我們利用 `MongoServer.Create` 方法，使用來自 web.config 的連線字串，以起始設定與 Compose 伺服器的連線。現在，我們可以呼叫 `GetDatabase` 來取得我們的 `MongoDatabase` 實例。
 
+ 
+
 在此情況下，我的資料庫名稱為 **t2**。 
 
 如需這些方法的相關資訊，請查看 [CSharp 驅動程式指導教學](http://www.mongodb.org/display/DOCS/CSharp+Driver+Tutorial#CSharpDriverTutorial-Createmethod)。
@@ -663,6 +681,8 @@ public ActionResult Index()
 }
 ```
 成功！
+
+
 
 我們現在具有與資料庫的連線，以及將內容遞送至視圖的方法。我們現在只需混合我們的模型，並將它傳遞到視圖。
 

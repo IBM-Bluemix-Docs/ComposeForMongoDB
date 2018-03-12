@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016,2017
+  years: 2016,2018
 lastupdated: "2017-08-03"
 ---
 
@@ -48,5 +48,5 @@ Robo 3T (anciennement Robomongo) est une interface graphique utilisateur simple 
 
 9. Utilisez la zone _CA Certificate_ pour entrer ou rechercher l'emplacement du fichier de certificat SSL que vous avez créé.
 
-10. Cliquez sur **Sauvegarder** pour terminer. 
+10. Cliquez sur **Sauvegarder** pour terminer.
 

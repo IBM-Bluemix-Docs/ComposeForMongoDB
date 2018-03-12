@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017,2018
 lastupdated: "2017-06-17"
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2017-06-17"
 Es gibt zwei Möglichkeiten, eine externe Anwendung mit {{site.data.keyword.composeForMongoDB_full}} zu verbinden:
 
 - Eine **Verbindungszeichenfolge** kann von bestimmten Clientbibliotheken verwendet werden und enthält alle Informationen, die andere Bibliotheken zum Herstellen einer Verbindung benötigen.
-- Die **Befehlszeile** ist ein vorformatierter Befehl, der `mongo` mit den korrekten Parametern aufruft. 
+- Die **Befehlszeile** ist ein vorformatierter Befehl, der `mongo` mit den korrekten Parametern aufruft.
 
 Beides finden Sie auf der Seite *Übersicht* Ihres {{site.data.keyword.composeForMongoDB}}-Service.
 
@@ -29,7 +29,7 @@ Wenn Sie Sprachen suchen, die hier nicht abgedeckt sind, suchen Sie in der [Mong
 
 ## Go / Golang
 
-Wie in den anderen Beispielen wird in diesem Dokument vorausgesetzt, dass eine Umgebungsvariable namens `MONGODB_URL` bei Ihrer Verbindungszeichenfolge vorhanden ist. Führen Sie den folgenden Befehl in der Shell aus, um diese Variable festzulegen:
+Wie in den anderen Beispielen wird in diesem Dokument vorausgesetzt, dass eine Umgebungsvariable namens `MONGODB_URL` bei Ihrer Verbindungszeichenfolge vorhanden ist.  Führen Sie den folgenden Befehl in der Shell aus, um diese Variable festzulegen:
 
 ```shell
 export MONGODB_URL="mongodb://user:pass@server.compose.io/db_name"
@@ -99,6 +99,7 @@ func main() {
 
 ```
 Die Zeile, mit der "?ssl=true" aus dem URI (19) entfernt wird, ist erforderlich, weil mgo derzeit angesichts des Standardparameters für SSL/TLS-Verbindungen einen "error if"-Fehler zurückgibt. Gehen Sie wie folgt vor, um eine Verbindung herzustellen und sicherzustellen, dass das öffentliche SSL-Zertifikat grundsätzlich dasselbe ist, jedoch bestimmte Zusatzschritte zum Laden des Zertifikats benötigt, in diesem Fall aus der Datei "servercert.crt":
+
 ```go
 package main
 
@@ -575,7 +576,7 @@ namespace mongodb_csharp.Models
   }
 }
 ```
-Erstellen Sie nun den Developer Controller.
+Erstellen Sie nun den Developer Controller. 
 
 Im vorliegenden Beispiel wird er als DeveloperController bezeichnet. Sie können das Kontrollkästchen zum Hinzufügen von Aktionsmethoden für Erstellungs-, Aktualisierungs- und Löschszenarios inaktivieren, da diese Funktion in der Einführung nicht behandelt wird.
 
@@ -628,7 +629,8 @@ namespace mongodb_csharp.Controllers
     }
 }
 ```
-Sie sehen, dass der Datenbankaufruf in eine separate Methode aufgeteilt wurde, die nachstehend aufgeführt ist. Hier wird die Methode `MongoServer.Create` verwendet, um mithilfe Ihrer Verbindungszeichenfolge aus Ihrer Datei 'web.config' eine Verbindung zu Ihrem Compose-Server zu initialisieren. Nun können Sie `GetDatabase` aufrufen, um Ihre Instanz von `MongoDatabase` abzurufen.
+Sie sehen, dass der Datenbankaufruf in eine separate Methode aufgeteilt wurde, die nachstehend aufgeführt ist. Hier wird die Methode `MongoServer.Create` verwendet, um mithilfe Ihrer Verbindungszeichenfolge aus Ihrer Datei 'web.config' eine Verbindung zu Ihrem Compose-Server zu initialisieren. Nun können Sie `GetDatabase` aufrufen, um Ihre Instanz von `MongoDatabase` abzurufen. 
+
 In diesem Fall ist der Datenbankname **t2**. 
 
 Weitere Informationen zu diesen Methoden finden Sie im [Lernprogramm zum CSharp-Treiber](http://www.mongodb.org/display/DOCS/CSharp+Driver+Tutorial#CSharpDriverTutorial-Createmethod).

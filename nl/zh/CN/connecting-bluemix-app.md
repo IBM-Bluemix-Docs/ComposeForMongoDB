@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2016,2017
+  years: 2016,2018
 lastupdated: "2017-06-17"
 ---
 
@@ -13,11 +13,11 @@ lastupdated: "2017-06-17"
 
 # 连接 {{site.data.keyword.cloud_notm}} 应用程序
 
-要将 {{site.data.keyword.cloud}} 应用程序连接到服务，请使用供应服务时所创建的服务凭证。样本应用程序演示如何使用 Node.js，通过提供的凭证连接到 {{site.data.keyword.composeForMongoDB_full}} 服务，以及如何创建数据库以及如何对数据库进行读取和写入操作。
+要将 {{site.data.keyword.cloud}} 应用程序连接到服务，请使用供应服务时所创建的服务凭证。样本应用程序演示如何使用 Node.js，通过提供的凭证连接到 {{site.data.keyword.composeForMongoDB_full}} 服务，如何创建数据库以及如何对数据库进行读取和写入操作。
 
 ## 使用“Hello World”样本应用程序进行连接
 
-[compose-mongodb-helloworld-nodejs](https://github.com/IBM-Bluemix/compose-mongodb-helloworld-nodejs) 样本应用程序演示如何使用 Node.js，通过提供的凭证连接到 {{site.data.keyword.composeForMongoDB}} 服务。应用程序创建、读取和写入数据库。
+[compose-mongodb-helloworld-nodejs](https://github.com/IBM-Cloud/compose-mongodb-helloworld-nodejs) 样本应用程序演示如何使用 Node.js，通过提供的凭证连接到 {{site.data.keyword.composeForMongoDB}} 服务。应用程序创建、读取和写入数据库。
 
 下载样本应用程序，并遵循自述文件中的指示信息。然后，在 {{site.data.keyword.cloud_notm}} 中的应用程序详细信息页面中，单击**查看应用程序**，以查看*示例*表的内容。
 

@@ -1,8 +1,8 @@
 ---
 
 Copyright:
-  Years: 2017
-lastupdated: "2017-10-23"
+  years: 2017,2018
+lastupdated: "2017-11-20"
 ---
 
 {:new_window: target="_blank"}
@@ -34,11 +34,9 @@ Si el servicio necesita más almacenamiento, o si desea reducir la cantidad de a
   ![El panel Escalar recursos](./images/mongodb-scale-show.png "El panel Escalar recursos")
 
 3. Ajuste el graduador para aumentar o reducir el almacenamiento asignado al servicio {{site.data.keyword.composeForMongoDB}}. Mueva el graduador a la izquierda para reducir la cantidad de almacenamiento o muévalo a la derecha para aumentar el almacenamiento.
-4. Pulse **Despliegue de escalado** para activar el escalado y volver a la visión general del panel de control. Aparece un mensaje 'escalado iniciado' en la parte superior de la página que le indica que el proceso de escalado está en curso y el panel _Detalles de despliegue_ también muestra el escalado en curso.
-
-  ![Escalado en curso](./images/scaling-in-progress.png "El panel Detalles de despliegue, que muestra que el escalado de la base de datos está en curso")
+4. Pulse **Despliegue de escalado** para activar el escalado y volver a la visión general del panel de control. 
   
-  Una vez finalizado el escalado, el panel _Detalles de despliegue_ se actualiza para mostrar el uso actual y el nuevo valor del almacenamiento disponible.
+Una vez finalizado el escalado, el panel _Detalles de despliegue_ se actualiza para mostrar el uso actual y el nuevo valor del almacenamiento disponible.
 
 
 ## Listas blancas

@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2017
+  years: 2017,2018
 lastupdated: "2017-06-17"
 ---
 
@@ -29,7 +29,7 @@ lastupdated: "2017-06-17"
 
 ## Go / Golang
 
-この資料では、他のすべての例と同じく、`MONGODB_URL` という環境変数で接続ストリングを設定します。この変数を設定するために、シェルで以下のコードを実行してください。
+この資料では、他のすべての例と同じく、`MONGODB_URL` という環境変数で接続ストリングを設定します。  この変数を設定するために、シェルで以下のコードを実行してください。
 
 ```shell
 export MONGODB_URL="mongodb://user:pass@server.compose.io/db_name"
@@ -98,7 +98,7 @@ func main() {
 }
 
 ```
-URI から "?ssl=true" を削除する行 (19) が必要なのは、SSL/TLS 接続の標準パラメーターを使用すると、現時点では mgo でエラーが発生するからです。サーバーの SSL 公開証明書の接続と検証の方法は基本的に同じですが、証明書を (この場合は servercert.crt ファイルから) ロードするために追加の手順が必要になります。
+URI から "?ssl=true" を削除する行 (19) が必要なのは、SSL/TLS 接続の標準パラメーターを使用すると、現時点では mgo でエラーが発生するからです。 サーバーの SSL 公開証明書の接続と検証の方法は基本的に同じですが、証明書を (この場合は servercert.crt ファイルから) ロードするために追加の手順が必要になります。
 
 ```go
 package main
@@ -171,7 +171,7 @@ func main() {
 ```javascript
 var MONGODB_URL="mongodb://user:pass@server.compose.io:port_name/db_name?ssl=true"
 ```
-このコードでは [node-mongodb-native](https://github.com/christkv/node-mongodb-native) ドライバーを使用していますが、実動環境ではもう少し*使いやすい*ドライバーを利用してもかまいません。Node パッケージは、[NPM](http://npmjs.org/) から入手できます。
+このコードでは [node-mongodb-native](https://github.com/christkv/node-mongodb-native) ドライバーを使用していますが、実動環境ではもう少し*使いやすい*ドライバーを利用してもかまいません。 Node パッケージは、[NPM](http://npmjs.org/) から入手できます。
 ```shell
 npm install mongodb
 ```
@@ -310,13 +310,13 @@ mongodb.Db.connect process.env.COMPOSE_URL, (error, client)->
 ```shell
 var MONGODB_URL="mongodb://user:pass@server.compose.io:port_name/db_name"
 ```
-このコードでは、[mongoose](http://mongoosejs.com/) ドライバーを使用します。Node パッケージは、[NPM](http://npmjs.org/) から入手できます。
+このコードでは、[mongoose](http://mongoosejs.com/) ドライバーを使用します。 Node パッケージは、[NPM](http://npmjs.org/) から入手できます。
 ```shell
 npm install mongoose
 ```
 ### Mongoose (Javascript) による接続
 
-基本的な技法は、上記の Node.js/direct のサンプルと同じです。オプション・マップを作成し、SSL 必須のパラメーターを追加し、MongoDB の URL を指定してそのオプション・マップを `mongoose.connect()` メソッドに渡します。以下の例では証明書を使用して接続し、今回も使用可能なコレクションのリストを出力します。
+基本的な技法は、上記の Node.js/direct のサンプルと同じです。 オプション・マップを作成し、SSL 必須のパラメーターを追加し、MongoDB の URL を指定してそのオプション・マップを `mongoose.connect()` メソッドに渡します。 以下の例では証明書を使用して接続し、今回も使用可能なコレクションのリストを出力します。
 ```javascript
 var mongoose = require('mongoose');
 var assert = require('assert');
@@ -359,7 +359,7 @@ mongoose.connect(process.env.MONGODB_URL, options);
 ```shell
 MONGODB_URL="mongodb://user:pass@server.compose.io/db_name"
 ```
-Ruby on Rails や Sinatra などのフレームワークで Ruby を使用している場合は、最初に `mongo` (2.x) gem をインストールします。言うまでもないことですが、[RubyGems](http://rubygems.org) が必要になります。1.9 より前の Ruby を使用している場合は、サンプルの先頭に `require 'rubygems'` を追加してください。
+Ruby on Rails や Sinatra などのフレームワークで Ruby を使用している場合は、最初に `mongo` (2.x) gem をインストールします。 言うまでもないことですが、[RubyGems](http://rubygems.org) が必要になります。 1.9 より前の Ruby を使用している場合は、サンプルの先頭に `require 'rubygems'` を追加してください。
 
  証明書を使用しない場合のコードはシンプルです。
 ```ruby
@@ -378,7 +378,7 @@ db = client.database
 collections = db.collection_names
 puts collections # ["coll1", "coll2", ...]
 ```
-Logger の行によって、ドライバーのデバッグ・メッセージを非表示にしています (実際にはかなりのメッセージがあります)。そのようなメッセージを表示したい場合は、その行をコメント化してください。
+Logger の行によって、ドライバーのデバッグ・メッセージを非表示にしています (実際にはかなりのメッセージがあります)。 そのようなメッセージを表示したい場合は、その行をコメント化してください。
 
 証明書を使用して接続する場合のコードも基本的に同じですが、接続時にさらに多くのオプション設定が必要になります。
 ```ruby
@@ -436,7 +436,7 @@ print db.collection_names()
 ```shell
 export MONGODB_URL="mongodb://user:pass@server.compose.io/db_name"
 ```
-元々は、AppFog の Larry Hitchon による [Gist](https://gist.github.com/coderoshi) から始まりました。それを Compose に合わせていくらか改良しています。とても[シンプルなドライバー](http://php.net/manual/en/class.mongodb.php)です。PECL がない場合は、[PECL をインストール](http://pecl.php.net/)してください。
+元々は、AppFog の Larry Hitchon による [Gist](https://gist.github.com/coderoshi) から始まりました。 それを Compose に合わせていくらか改良しています。 とても[シンプルなドライバー](http://php.net/manual/en/class.mongodb.php)です。 PECL がない場合は、[PECL をインストール](http://pecl.php.net/)してください。
 ```shell
     sudo pecl install mongo
 ```
@@ -517,17 +517,17 @@ export MONGODB_URL="mongodb://user:pass@server.compose.io/db_name"
 
 ### 新規プロジェクトの作成
 
-最初に、Visual Studio で新規プロジェクトを作成します。このサンプルでは、**ASP.NET MVC 2 Web アプリケーション**を選択しました。*(ここで取り上げるサンプルは、必要であれば WebForms に簡単に移植できます。)*
+最初に、Visual Studio で新規プロジェクトを作成します。 このサンプルでは、**ASP.NET MVC 2 Web アプリケーション**を選択しました。 *(ここで取り上げるサンプルは、必要であれば WebForms に簡単に移植できます。)*
 ![Visual Studio でのプロジェクトの作成](./images/create-project.jpg)
 ### 参照の追加
 
-次に、MongoDB データベースへの接続のために、**MongoDriver** と **MongoBSON** の DLL を参照する必要があります。C# ドライバーのインストーラーによって、その 2 つの DLL が参照ウィンドウの「.NET」タブに追加されています。
+次に、MongoDB データベースへの接続のために、**MongoDriver** と **MongoBSON** の DLL を参照する必要があります。 C# ドライバーのインストーラーによって、その 2 つの DLL が参照ウィンドウの「.NET」タブに追加されています。
 
 参照を追加したら、数行のコードで Compose データベースに接続して照会を実行できます。
 ![.NET リストからの参照の追加](./images/csharp-add-reference.jpg)
 ### 接続情報の追加
 
-さらに、データベース情報に基づいて接続ストリングをセットアップします。アプリケーションの web.config ファイルに新しい接続ストリングを追加してください。以下のように入力します。
+さらに、データベース情報に基づいて接続ストリングをセットアップします。アプリケーションの web.config ファイルに新しい接続ストリングを追加してください。 以下のように入力します。
 ```csharp
 <connectionStrings>
   <add name="ApplicationServices"
@@ -537,7 +537,7 @@ export MONGODB_URL="mongodb://user:pass@server.compose.io/db_name"
     connectionString="your mongo uri"/>
 </connectionStrings>
 ```
-もちろん、**your mongo uri** の部分は、Web インターフェースに表示される実際の Compose URI に置き換えます。以下のようにすれば、その情報を確認できます。
+もちろん、**your mongo uri** の部分は、Web インターフェースに表示される実際の Compose URI に置き換えます。 以下のようにすれば、その情報を確認できます。
 
 1. [Compose](https://www.compose.io) にログインします。
 2. 接続先のデータベースのポート番号をクリックします。
@@ -547,7 +547,7 @@ export MONGODB_URL="mongodb://user:pass@server.compose.io/db_name"
 
 ### モデルとコントローラーのセットアップ
 
-文書を保管するためのモデルを作成します。このサンプルで使用するデータベースは、開発者の基本情報をまとめたコレクションなので、そうした情報のプロパティーを保管するデータ変換オブジェクトを作成し、そのような DTO の汎用リストをモデルとして返すようにします。
+文書を保管するためのモデルを作成します。 このサンプルで使用するデータベースは、開発者の基本情報をまとめたコレクションなので、そうした情報のプロパティーを保管するデータ変換オブジェクトを作成し、そのような DTO の汎用リストをモデルとして返すようにします。
 
 Models ディレクトリーの下に **DeveloperDTO.cs** ファイルを入れる DTO ディレクトリーを作成します。
 ```csharp
@@ -563,7 +563,7 @@ namespace mongodb_csharp.Models.DTO
 }
 ```
 
-**DeveloperModel.cs** を Models ディレクトリーに追加します。*DTO ディレクトリーの using 節を必ず組み込んでください。*
+**DeveloperModel.cs** を Models ディレクトリーに追加します。 *DTO ディレクトリーの using 節を必ず組み込んでください。*
 ```csharp
 using System.Collections.Generic;
 using mongodb_csharp.Models.DTO;
@@ -576,11 +576,11 @@ namespace mongodb_csharp.Models
   }
 }
 ```
-次に、DeveloperController を作成します。
+次に、DeveloperController を作成します。 
 
-このサンプルでは、DeveloperController という名前にします。「Add action methods for Create, Update and Delete Scenarios (Create、Update、Delete の各シナリオのアクション・メソッドを追加する)」ボックスはチェック・マークを外したままでかまいません (この入門ガイドではその機能に触れません)。
+このサンプルでは、DeveloperController という名前にします。 「Add action methods for Create, Update and Delete Scenarios (Create、Update、Delete の各シナリオのアクション・メソッドを追加する)」ボックスはチェック・マークを外したままでかまいません (この入門ガイドではその機能に触れません)。
 
-作成したコントローラーを開いて、using 節を追加します。最低でも以下のようにしてください。
+作成したコントローラーを開いて、using 節を追加します。 最低でも以下のようにしてください。
 
 強調表示した行では、プライベートの `MongoDatabase` オブジェクトを宣言し、コンストラクターでインスタンス化しています。
 
@@ -629,7 +629,7 @@ namespace mongodb_csharp.Controllers
     }
 }
 ```
-ここでは、データベース呼び出しを別のメソッドに切り離しました (下記のコードを参照)。上記のコードでは、`MongoServer.Create` メソッドを使用し、web.config にある接続ストリングで Compose サーバーへの接続を初期化しています。次に、`GetDatabase` を呼び出して、`MongoDatabase` インスタンスを取得します。
+ここでは、データベース呼び出しを別のメソッドに切り離しました (下記のコードを参照)。 上記のコードでは、`MongoServer.Create` メソッドを使用し、web.config にある接続ストリングで Compose サーバーへの接続を初期化しています。 次に、`GetDatabase` を呼び出して、`MongoDatabase` インスタンスを取得します。 
 
 ここでのデータベース名は **t2** です。 
 
@@ -665,11 +665,11 @@ public ActionResult Index()
 ```
 これで完了です。
 
-データベースへの接続も、コンテンツをビューに送信するためのメソッドも用意できました。あとは、モデルにデータを取り込んでビューに渡すだけです。
+データベースへの接続も、コンテンツをビューに送信するためのメソッドも用意できました。 あとは、モデルにデータを取り込んでビューに渡すだけです。
 
 ### データの表示
 
-このサンプルでは、開発者の情報を反復的に取得して画面に出力します。Views ディレクトリーに `Developer` フォルダーを作成し、新しい .aspx ファイル (`Index.aspx`) を追加します。以下のコードを追加すれば、すべて完了です。
+このサンプルでは、開発者の情報を反復的に取得して画面に出力します。 Views ディレクトリーに `Developer` フォルダーを作成し、新しい .aspx ファイル (`Index.aspx`) を追加します。 以下のコードを追加すれば、すべて完了です。
 ```asp
 <%%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<mongodb_csharp.Models.DeveloperModel>" %>
 
