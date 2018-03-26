@@ -1,0 +1,25 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="compose-for-mongodb" audience="service" href="/docs/services/ComposeForMongoDB/getting_started.html"}
+Compose For MongoDB
+
+	{: .navgroup id="learn"}
+	getting_started.md
+	index.md
+	pricing.md
+
+	{: .topicgroup}
+	Il dashboard del servizio
+		dashboard-overview.md
+		dashboard-backups.md
+		dashboard-settings.md
+	{: .navgroup-end}
+
+	{: .navgroup id="howto"}
+	{: .topicgroup}
+	Connessione a Compose for MongoDB
+		connecting-bluemix-app.md
+		connecting-external.md
+		connecting-robo3T.md
+	{: .navgroup-end}
