@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016,2018
-lastupdated: "2017-11-15"
+lastupdated: "2018-03-26"
 ---
 
 {:new_window: target="_blank"}
@@ -33,7 +33,11 @@ You can manage your service from the service dashboard. Here you can find inform
 - manage your backups
 - allocate more resources for your service
 - use whitelists to restrict access to your databases. 
+
 For more information, see [Settings](./dashboard-settings.html).
+
+{{site.data.keyword.composeForMongoDB}} relies on Cloud Foundry roles to manage access to the service. Only users with the Developer role can see or use the service dashboard. For more information on Cloud Foundry roles, see the [Cloud Foundry access](https://console.bluemix.net/docs/iam/cfaccess.html#cfaccess) and the [Managing Cloud Foundry access](https://console.bluemix.net/docs/iam/mngcf.html#mngcf) pages.
+{: .tip}
 
 ## Connecting to {{site.data.keyword.composeForMongoDB}}
 
