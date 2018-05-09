@@ -53,4 +53,4 @@ If you want to connect to {{site.data.keyword.composeForMongoDB}} from outside {
 
 ## Creating a web application using MEAN stack
 
-You can use {{site.data.keyword.composeForMongoDB}} as part of a MEAN stack to create a web application. Follow the steps in the [Modern Web Application using MEAN stack](../../tutorials/mean-stack.html) tutorial to create a web application composed of a Mongo DB, Express web framework, Angular front end framework and a Node.js runtime.
+You can use {{site.data.keyword.composeForMongoDB}} as part of a MEAN stack to create a web application. Follow the steps in the [Modern Web Application using MEAN stack](/docs/tutorials/mean-stack.html) tutorial to create a web application composed of a Mongo DB, Express web framework, Angular front end framework and a Node.js runtime.
