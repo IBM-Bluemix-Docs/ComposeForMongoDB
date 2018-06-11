@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016,2018
-lastupdated: "2017-11-15"
+lastupdated: "2018-03-26"
 ---
 
 {:new_window: target="_blank"}
@@ -32,8 +32,12 @@ lastupdated: "2017-11-15"
 您可以从服务仪表板管理服务。您可以在此找到有关 {{site.data.keyword.cloud_notm}} Compose 数据库以及如何连接到该数据库的信息。您还可以：
 - 管理备份
 - 为服务分配更多资源
-- 使用白名单来限制对数据库的访问。
+- 使用白名单来限制对数据库的访问。 
+
 有关更多信息，请参阅[设置](./dashboard-settings.html)。
+
+{{site.data.keyword.composeForMongoDB}} 依赖于 Cloud Foundry 角色来管理对服务的访问权。只有具有开发者角色的用户才能查看或使用服务仪表板。有关 Cloud Foundry 角色的更多信息，请参阅 [Cloud Foundry 访问权](https://console.bluemix.net/docs/iam/cfaccess.html#cfaccess)和[管理 Cloud Foundry 访问权](https://console.bluemix.net/docs/iam/mngcf.html#mngcf)页面。
+{: .tip}
 
 ## 连接到 {{site.data.keyword.composeForMongoDB}}
 

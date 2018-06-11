@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016,2018
-lastupdated: "2017-11-15"
+lastupdated: "2018-03-26"
 ---
 
 {:new_window: target="_blank"}
@@ -33,7 +33,11 @@ Vous pouvez gérer votre service depuis son tableau de bord. Vous y trouverez de
 - gérer vos sauvegardes ;
 - allouer plus de ressources à votre service ;
 - constituer des listes blanches pour limiter l'accès à vos bases de données. 
+
 Pour plus d'informations, voir [Paramètres](./dashboard-settings.html).
+
+{{site.data.keyword.composeForMongoDB}} repose sur les rôles Cloud Foundry pour la gestion de l'accès au service. Seuls les utilisateurs dotés du rôle Développeur peuvent voir ou utiliser le tableau de bord du service. Pour plus d'informations sur les rôles Cloud Foundry, voir les pages [Accès Cloud Foundry](https://console.bluemix.net/docs/iam/cfaccess.html#cfaccess) et [Gestion de l'accès Cloud Foundry](https://console.bluemix.net/docs/iam/mngcf.html#mngcf).
+{: .tip}
 
 ## Connexion à {{site.data.keyword.composeForMongoDB}}
 

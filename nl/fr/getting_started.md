@@ -147,7 +147,7 @@ bx cf push
 
 ## Etape 10 : Vérification de la connexion de l'application à votre service {{site.data.keyword.composeForMongoDB}}
 
-1. Accédez au tableau de bord du service {{site.data.keyword.composeForMongoDB}}. 
+1. Accédez au tableau de bord du service {{site.data.keyword.composeForMongoDB}}.
 2. Sélectionnez _Connexions_ dans le menu du tableau de bord. Votre application doit être répertoriée sous _Applications connectées_.
 
 Si votre application n'est pas répertoriée, répétez les étapes 7 et 8, en vérifiant que le fichier [manifest.yml](#update-manifest) contient les informations appropriées.

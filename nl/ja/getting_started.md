@@ -14,7 +14,7 @@ lastupdated: "2018-02-16"
 
 
 # 概説チュートリアル
-このチュートリアルでは、[compose-mongodb-helloworld-nodejs](https://github.com/IBM-Cloud/compose-mongodb-helloworld-nodejs) サンプル・アプリケーションを使用して、用意されている資格情報を使用して Node.js で {{site.data.keyword.composeForMongoDB_full}} サービスに接続する方法を示します。アプリケーションは、アプリケーションの Web インターフェースを介して提供されるデータを使用して、データベースを作成し、データベースに対して読み取りおよび書き込みを行います。
+このチュートリアルでは、[compose-mongodb-helloworld-nodejs](https://github.com/IBM-Cloud/compose-mongodb-helloworld-nodejs) サンプル・アプリケーションを使用して、用意されている資格情報を使用して Node.js で {{site.data.keyword.composeForMongoDB_full}} サービスに接続する方法を示します。 アプリケーションは、アプリケーションの Web インターフェースを介して提供されるデータを使用して、データベースを作成し、データベースに対して読み取りおよび書き込みを行います。
 {: shortdesc}
 
 ## 始めに
@@ -58,7 +58,7 @@ npm を使用して従属項目をインストールします。
 
 ## ステップ 4: サービス資格情報を作成する
 
-アプリケーションを {{site.data.keyword.cloud_notm}} にプッシュする前に、ローカル環境でアプリケーションを実行して {{site.data.keyword.composeForMongoDB}} サービス・インスタンスへの接続をテストできます。サービスに接続するには、一連のサービス資格情報を作成する必要があります。
+アプリケーションを {{site.data.keyword.cloud_notm}} にプッシュする前に、ローカル環境でアプリケーションを実行して {{site.data.keyword.composeForMongoDB}} サービス・インスタンスへの接続をテストできます。 サービスに接続するには、一連のサービス資格情報を作成する必要があります。
 
 1. {{site.data.keyword.cloud_notm}} ダッシュボードから、{{site.data.keyword.composeForMongoDB}} サービス・インスタンスを開きます。
 2. メインメニューから_「サービス資格情報 (Service Credentials)」_を選択して、「サービス資格情報 (Service Credentials)」ビューを開きます。
@@ -89,7 +89,7 @@ npm を使用して従属項目をインストールします。
 npm start
 ```
 
-これで、アプリケーションが [http://localhost:8080](http://localhost:8080) で実行されます。 {{site.data.keyword.composeForMongoDB}} データベースに単語と定義を追加できます。アプリケーションを停止して再始動すると、追加した単語が、ページの最新表示時に表示されます。
+これで、アプリケーションが [http://localhost:8080](http://localhost:8080) で実行されます。 {{site.data.keyword.composeForMongoDB}} データベースに単語と定義を追加できます。 アプリケーションを停止して再始動すると、追加した単語が、ページの最新表示時に表示されます。
 
 次のステージでは、アプリケーションをサービス・インスタンスに接続し、アプリケーションを {{site.data.keyword.cloud_notm}} にデプロイします。
 
@@ -105,7 +105,7 @@ npm start
   bx login
   ```
 
-  統合ユーザー ID がある場合は、`bx login --sso` コマンドを使用して、シングル・サインオン ID でログインします。詳細については、[統合 ID によるログイン](https://console.{DomainName}/docs/cli/login_federated_id.html#federated_id)を参照してください。
+  統合ユーザー ID がある場合は、`bx login --sso` コマンドを使用して、シングル・サインオン ID でログインします。 詳細については、[統合 ID によるログイン](https://console.{DomainName}/docs/cli/login_federated_id.html#federated_id)を参照してください。
   {: .tip}
 
 2. 正しい {{site.data.keyword.cloud_notm}} 組織とスペースをターゲットとしていることを確認してください。
@@ -148,13 +148,13 @@ bx cf push
 ## ステップ 10: アプリケーションが {{site.data.keyword.composeForMongoDB}} サービスに接続していることを確認する
 
 1. {{site.data.keyword.composeForMongoDB}} サービス・ダッシュボードにナビゲートします。
-2. ダッシュボード・メニューから_「接続」_を選択します。アプリケーションが_「接続済みアプリケーション」_に表示されます。
+2. ダッシュボード・メニューから_「接続」_を選択します。 アプリケーションが_「接続済みアプリケーション」_に表示されます。
 
 アプリケーションが表示されない場合は、ステップ 7 と 8 を再度実行し、[manifest.yml](#update-manifest) で正しい詳細情報を入力したことを確認します。
 
 ## ステップ 11: アプリケーションを使用する
 
-`<host>.mybluemix.net/` にアクセスすると、{{site.data.keyword.composeForMongoDB}} コレクションの内容を表示できます。単語と定義を追加すると、データベースに追加され、表示されます。アプリケーションを停止して再始動すると、追加した単語と定義が表示されます。
+`<host>.mybluemix.net/` にアクセスすると、{{site.data.keyword.composeForMongoDB}} コレクションの内容を表示できます。 単語と定義を追加すると、データベースに追加され、表示されます。 アプリケーションを停止して再始動すると、追加した単語と定義が表示されます。
 
 
 ## 次のステップ

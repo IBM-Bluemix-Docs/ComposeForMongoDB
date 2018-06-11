@@ -1,12 +1,12 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="compose-for-mongodb" audience="service" href="/docs/services/ComposeForMongoDB/getting_started.html"}
+{: .toc subcollection="compose-for-mongodb" audience="service" href="/docs/services/ComposeForMongoDB/index.html"}
 Compose For MongoDB
 
 	{: .navgroup id="learn"}
-	getting_started.md
 	index.md
+	getting_started.md
 	pricing.md
 
 	{: .topicgroup}
@@ -14,8 +14,10 @@ Compose For MongoDB
 		dashboard-overview.md
 		dashboard-backups.md
 		dashboard-settings.md
+	
+	user-notes.md
 	{: .navgroup-end}
-
+	
 	{: .navgroup id="howto"}
 	{: .topicgroup}
 	Connessione a Compose for MongoDB
@@ -23,3 +25,6 @@ Compose For MongoDB
 		connecting-external.md
 		connecting-robo3T.md
 	{: .navgroup-end}
+
+
+

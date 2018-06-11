@@ -14,8 +14,10 @@ Compose For MongoDB
 		dashboard-overview.md
 		dashboard-backups.md
 		dashboard-settings.md
+	
+	user-notes.md
 	{: .navgroup-end}
-
+	
 	{: .navgroup id="howto"}
 	{: .topicgroup}
 	連接至 Compose for MongoDB
@@ -23,3 +25,6 @@ Compose For MongoDB
 		connecting-external.md
 		connecting-robo3T.md
 	{: .navgroup-end}
+
+
+

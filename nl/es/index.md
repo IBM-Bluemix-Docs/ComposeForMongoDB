@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016,2018
-lastupdated: "2017-11-15"
+lastupdated: "2018-03-26"
 ---
 
 {:new_window: target="_blank"}
@@ -33,7 +33,11 @@ Puede gestionar el servicio desde el panel de control del servicio. Aquí encont
 - gestionar copias de seguridad
 - asignar más recursos para el servicio
 - utilizar listas blancas para restringir el acceso a las bases de datos. 
+
 Para obtener más información, consulte [Valores](./dashboard-settings.html).
+
+{{site.data.keyword.composeForMongoDB}} utiliza roles de Cloud Foundry para gestionar el acceso al servicio. Solo los usuarios con el rol de desarrollador pueden ver o utilizar el panel de control del servicio. Para obtener más información sobre los roles de Cloud Foundry, consulte las páginas [Acceso de Cloud Foundry](https://console.bluemix.net/docs/iam/cfaccess.html#cfaccess) y [Gestión del acceso de Cloud Foundry](https://console.bluemix.net/docs/iam/mngcf.html#mngcf).
+{: .tip}
 
 ## Conexión a {{site.data.keyword.composeForMongoDB}}
 

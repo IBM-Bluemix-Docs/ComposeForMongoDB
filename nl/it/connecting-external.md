@@ -177,7 +177,7 @@ npm install mongodb
 ```
 ### Connessione a Node.js (Javascript)
 
-Qui ci colleghiamo, soltanto stabilendo la codifica SSL/TLS senza convalidare il server:
+Qui ci colleghiamo, soltanto stabilendo la crittografia SSL/TLS senza convalidare il server:
 ```javascript
 var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');

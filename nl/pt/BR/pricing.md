@@ -33,11 +33,11 @@ Cada unidade adicional (1 GB de armazenamento/102 MB de memória) tem um preço 
 Número de unidades|Preço por unidade
 ----------|-----------
 1 - 9 unidades|base por preço unitário -- US$18,00/Unidade
-10 - 24 unidades|10% redução -- US$16,20/Unidade
-25 - 49 unidades|20% redução -- US$14,40/Unidade
-50 - 99 unidades|30% redução -- US$12,60/Unidade
-100 - 499 unidades|40% redução -- US$10,80/Unidade
-500 - 999 unidades|50% redução -- US$9,00/Unidade
-1.000 - 4.999 unidades|60% redução -- US$7,20/Unidade
-+ de 5.000 unidades|70% redução -- US$ 5,40/GB
+10 - 24 unidades|redução de 10% -- US$16,20/Unidade
+25 - 49 unidades|redução de 20% -- US$14,40/Unidade
+50 - 99 unidades|redução de 30% -- US$12,60/Unidade
+100 - 499 unidades|redução de 40% -- US$10,80/Unidade
+500 - 999 unidades|redução de 50% -- US$9,00/Unidade
+1.000 - 4.999 unidades|redução de 60% -- US$7,20/Unidade
++ de 5.000 unidades|redução de 70% -- US$ 5,40/GB
 {: caption="Tabela 1. Precificação em camadas do {{site.data.keyword.composeForMongoDB}}" caption-side="top"}

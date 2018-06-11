@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016,2018
-lastupdated: "2017-11-15"
+lastupdated: "2018-03-26"
 ---
 
 {:new_window: target="_blank"}
@@ -43,7 +43,11 @@ Quando você provisiona sua instância do {{site.data.keyword.composeForMongoDB}
 - gerenciar seus backups
 - alocar mais recursos para seu serviço
 - use listas de desbloqueio para restringir o acesso a seus bancos de dados. 
+
 Para obter mais informações, veja [Configurações](./dashboard-settings.html).
+
+O {{site.data.keyword.composeForMongoDB}} depende de funções do Cloud Foundry para gerenciar o acesso ao serviço. Somente usuários com a função de Desenvolvedor podem ver ou usar o painel de serviço. Para obter mais informações sobre as funções do Cloud Foundry, veja as páginas [Acesso ao Cloud Foundry](https://console.bluemix.net/docs/iam/cfaccess.html#cfaccess) e [Gerenciando ao acesso ao Cloud Foundry](https://console.bluemix.net/docs/iam/mngcf.html#mngcf).
+{: .tip}
 
 ## Conectando-se ao {{site.data.keyword.composeForMongoDB}}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016,2018
-lastupdated: "2017-11-15"
+lastupdated: "2018-03-26"
 ---
 
 {:new_window: target="_blank"}
@@ -32,7 +32,12 @@ lastupdated: "2017-11-15"
 您可以從服務儀表板來管理服務。在這裡，您可以找到 {{site.data.keyword.cloud_notm}} Compose 資料庫的相關資訊，以及連接方式。您也可以：
 - 管理備份
 - 為您的服務配置更多資源
-- 使用白名單來限制對資料庫的存取權。如需相關資訊，請參閱[設定](./dashboard-settings.html)。
+- 使用白名單來限制對資料庫的存取權。 
+
+如需相關資訊，請參閱[設定](./dashboard-settings.html)。
+
+{{site.data.keyword.composeForMongoDB}} 根據 Cloud Foundry 角色來管理對服務的存取。只有具有「開發人員」角色的使用者才能看到或使用服務儀表板。如需 Cloud Foundry 角色的相關資訊，請參閱 [Cloud Foundry 存取](https://console.bluemix.net/docs/iam/cfaccess.html#cfaccess)及[管理 Cloud Foundry 存取](https://console.bluemix.net/docs/iam/mngcf.html#mngcf)頁面。
+{: .tip}
 
 ## 連接至 {{site.data.keyword.composeForMongoDB}}
 
@@ -42,9 +47,9 @@ lastupdated: "2017-11-15"
 
 若要將 {{site.data.keyword.cloud_notm}} 應用程式連接至服務，請使用與服務一起建立的認證。您可以在[連接 {{site.data.keyword.cloud_notm}} 應用程式](./connecting-bluemix-app.html)中，找到如何將 {{site.data.keyword.cloud_notm}} 應用程式連接至 {{site.data.keyword.composeForMongoDB}} 服務的資訊。
 
-## 從 {{site.data.keyword.cloud_notm}}
+## 從 {{site.data.keyword.cloud_notm}} 之外連接至 {{site.data.keyword.composeForMongoDB}}
 
- 之外連接至 {{site.data.keyword.composeForMongoDB}}如果您想要從 {{site.data.keyword.cloud_notm}} 之外連接至 {{site.data.keyword.composeForMongoDB}}，則可以使用所提供的連線字串或指令行。您可以在[連接外部應用程式](./connecting-external.html)中，找到如何連接的相關資訊。
+如果您想要從 {{site.data.keyword.cloud_notm}} 之外連接至 {{site.data.keyword.composeForMongoDB}}，則可以使用所提供的連線字串或指令行。您可以在[連接外部應用程式](./connecting-external.html)中，找到如何連接的相關資訊。
 
 ## 使用 MEAN 堆疊建立 Web 應用程式
 
