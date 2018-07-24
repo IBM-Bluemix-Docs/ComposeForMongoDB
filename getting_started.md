@@ -30,7 +30,7 @@ You can create a {{site.data.keyword.composeForMongoDB}} service from the [{{sit
 
 Choose a service name, region, organization and space to provision the service in, and for the **Select a database version** field, choose _Latest Preferred Version_.
 
-Next, choose a pricing plan for your service. You can choose the *Standard* or *Enterprise* plans. With the *Enterprise* plan, you can provision your {{site.data.keyword.composeForMongoDB}} instance into an available {{site.data.keyword.composeEnterprise}} cluster. {{site.data.keyword.composeEnterprise}} provides the security and isolation required by enterprise compliance and uses dedicated networking to ensure the performance of the deployed databases. See the [Compose Enterprise](../ComposeEnterprise/index.html) documentation for more details.
+Next, choose a pricing plan for your service. You can choose the *Standard* or *Enterprise* plans. With the *Enterprise* plan, you can provision your {{site.data.keyword.composeForMongoDB}} instance into an available {{site.data.keyword.composeEnterprise}} cluster. {{site.data.keyword.composeEnterprise}} provides the security and isolation required by enterprise compliance and uses dedicated networking to ensure the performance of the deployed databases. See the [{{site.data.keyword.composeEnterprise}}](/docs/services/ComposeEnterprise/index.html) documentation for more details.
 
 Click **Create** to provision your service. Provisioning can take a while to complete. You can check on the progress by going to the _Manage_ view for the service.
 
@@ -44,6 +44,7 @@ Clone the Hello World app to your local environment from your terminal using the
 ```
 git clone https://github.com/IBM-Cloud/compose-mongodb-helloworld-nodejs.git
 ```
+{: codeblock}
 
 ## Step 3: Install the app dependencies
 
@@ -54,6 +55,7 @@ Use npm to install dependencies.
   ```
   cd compose-mongodb-helloworld-nodejs
   ```
+  {: codeblock}
 
 2. Install the dependencies listed in the `package.json` file.
   
@@ -70,16 +72,16 @@ The {{site.data.keyword.cloud_notm}} CLI tool tool is what you'll use to communi
 1. Connect to {{site.data.keyword.cloud_notm}} in the command line tool and follow the prompts to log in.
 
   ```
-  bx login
+  ibmcloud login
   ```
 
-  If you have a federated user ID, use the `bx login --sso` command to log in with your single sign on ID. See [Logging in with a federated ID](https://console.{DomainName}/docs/cli/login_federated_id.html#federated_id) to learn more.
+  If you have a federated user ID, use the `ibmcloud login --sso` command to log in with your single sign on ID. See [Logging in with a federated ID](https://console.{DomainName}/docs/cli/login_federated_id.html#federated_id) to learn more.
   {: .tip}
 
 2. Make sure you are targetting the correct {{site.data.keyword.cloud_notm}} org and space.
 
   ```
-  bx target --cf
+  ibmcloud target --cf
   ```
 
   Choose from the options provided, using the same values you used when you created the service.
@@ -113,7 +115,7 @@ This step will fail if the service has not finished provisioning from Step 1. Yo
 When you push the app it will automatically be bound to the service specified in the manifest file.
 
 ```
-bx cf push
+ibmcloud cf push
 ```
 
 ## Step 8: Check the app is connected to your {{site.data.keyword.composeForMongoDB}} service
@@ -121,7 +123,7 @@ bx cf push
 1. Navigate to your {{site.data.keyword.composeForMongoDB}} service dashboard
 2. Select _Connections_ from the dashboard menu. Your application should be listed under _Connected Applications_.
 
-If your application is not listed, repeat Steps 7 ad 8, making sure you have entered the correct details in [manifest.yml](#update-manifest).
+If your application is not listed, repeat Steps 7 and 8, making sure you have entered the correct details in [manifest.yml](#update-manifest).
 
 ## Step 9: Use the app
 
@@ -149,6 +151,7 @@ Instead of pushing the app into {{site.data.keyword.cloud_notm}} you can run it 
     }
   }
   ```
+  {: codeblock}
 7. Save the file as `vcap-local.json` in the directory where the sample app is located.
 
 To avoid accidentally exposing your credentials when pushing an application to Github or {{site.data.keyword.cloud_notm}} you should make sure that the file containing your credentials is listed in the relevant ignore file. If you open `.cfignore` and `.gitignore` in your application directory you'll see that `vcap-local.json` is listed in both, so it won't be included in the files that are uploaded when you push the app to either Github or {{site.data.keyword.cloud_notm}}.

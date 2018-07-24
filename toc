@@ -26,5 +26,12 @@ Compose For MongoDB
 		connecting-robo3T.md
 	{: .navgroup-end}
 
+	{: .navgroup id="reference"}
+	reference-versions.md
+	reference-architecture.md
+	reference-connections.md
+	reference-other-offerings.md
+	{: .navgroup-end}
+
 
 
