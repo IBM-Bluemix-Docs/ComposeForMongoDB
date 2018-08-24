@@ -37,10 +37,12 @@ Fai clic sulla riga corrispondente per espandere le opzioni per ogni backup disp
 
 ### Utilizzo dell'API per visualizzare i backup esistenti
 
-Un elenco dei backup è disponibile nell'endpoint `GET /2016-07/deployments/:id/backups`. L'endpoint fondazione, con l'ID istanza di servizio e l'ID distribuzione, sono visualizzati nella _Panoramica_ del servizio. Ad esempio: 
-``` 
+Un elenco dei backup è disponibile nell'endpoint `GET /2016-07/deployments/:id/backups`. L'endpoint fondazione, con l'ID istanza di servizio e l'ID distribuzione sono entrambi visualizzati nella _Panoramica_ del servizio. Ad esempio: 
+
+```
 https://composebroker-dashboard-public.mybluemix.net/api/2016-07/instances/$INSTANCE_ID/deployments/$DEPLOYMENT_ID/backups
-```  
+```
+{: codeblock}
 
 ## Creazione di un backup manuale
 
@@ -70,12 +72,12 @@ Trova il backup da cui vuoi eseguire il ripristino nella pagina _Backups_ del tu
 
 ## Ripristino di un backup
 
-Per ripristinare un backup in una nuova istanza, segui le istruzioni per visualizzare i backup esistenti, quindi fai clic sulla riga corrispondente per espandere le opzioni del backup che desideri scaricare. Fai clic sul pulsante **Restore**. Viene visualizzato un messaggio per farti sapere che è stato avviato un ripristino. La nuova istanza del servizio sarà automaticamente denominata "mongodb-restore-[timestamp]" e visualizzata nel tuo dashboard dopo l'avvio del provisioning.
+Per ripristinare un backup in una nuova istanza del servizio, segui le istruzioni per visualizzare i backup esistenti, quindi fai clic sulla riga corrispondente per espandere le opzioni del backup che desideri scaricare. Fai clic sul pulsante **Restore**. Viene visualizzato un messaggio per farti sapere che è stato avviato un ripristino. La nuova istanza del servizio sarà automaticamente denominata "mongodb-restore-[timestamp]" e visualizzata nel tuo dashboard dopo l'avvio del provisioning.
 
 ### Ripristino tramite la CLI {{site.data.keyword.cloud_notm}}
 
 Utilizza la seguente procedura per ripristinare un backup da un servizio in esecuzione a un nuovo servizio utilizzando la CLI {{site.data.keyword.cloud_notm}}. 
-1. Se ne hai bisogno, [scaricala e installala](https://console.bluemix.net/docs/cli/index.html#overview). 
+1. Se ne hai bisogno, [scaricala e installala](https://console.{DomainName}/docs/cli/index.html#overview). 
 2. Trova il backup da cui vuoi eseguire il ripristino nella pagina _Backups_ del tuo servizio e copia il backup_id.  
   **In alternativa**  
   Usa `GET /2016-07/deployments/:id/backups` per trovare un backup e il suo ID tramite la API Compose. L'endpoint fondazione e l'ID istanza di servizio sono entrambi visualizzati nella _Panoramica_ del servizio. Ad esempio: 
@@ -84,15 +86,15 @@ Utilizza la seguente procedura per ripristinare un backup da un servizio in esec
   ```  
   La risposta avrà un elenco di tutti i backup disponibili per tale istanza del servizio. Scegli il backup da cui vuoi eseguire il ripristino e copiane l'ID.
 
-3. Accedi con l'account e le credenziali appropriati. `bx login` (oppure `bx login -help` per visualizzare tutte le opzioni di login).
+3. Accedi con l'account e le credenziali appropriati. `ibmcloud login` (oppure `ibmcloud login -help` per visualizzare tutte le opzioni di accesso).
 
-4. Passa alla tua organizzazione e al tuo spazio: `bx target -o "$YOUR_ORG" -s "YOUR_SPACE"`
+4. Passa alla tua organizzazione e al tuo spazio: `ibmcloud target -o "$YOUR_ORG" -s "YOUR_SPACE"`
 
 5. Usa il comando `service create` per eseguire il provisioning di un nuovo servizio e fornire il servizio di origine e lo specifico backup che stai ripristinando in un oggetto JSON. Ad esempio:
 ``` 
-bx service create SERVICE PLAN SERVICE_INSTANCE_NAME -c '{"source_service_instance_id": "$SERVICE_INSTANCE_ID", "backup_id": "$BACKUP_ID" }'
+ibmcloud service create SERVICE PLAN SERVICE_INSTANCE_NAME -c '{"source_service_instance_id": "$SERVICE_INSTANCE_ID", "backup_id": "$BACKUP_ID" }'
 ```
-  Il campo _SERVICE_ deve essere compose-for-mongodb e il campo _PLAN_ deve essere Standard o Enterprise, a seconda del tuo ambiente. _SERVICE\_INSTANCE\_NAME_ è dove inserisci il nome per il tuo nuovo servizio. _source\_service\_instance\_id_ è l'ID dell'istanza di servizio dell'origine del backup; può essere ottenuto eseguendo `bx cf service DISPLAY_NAME --guid`, dove _DISPLAY\_NAME_ è il nome del servizio da cui proviene il backup. 
+  Il campo _SERVICE_ deve essere compose-for-mongodb e il campo _PLAN_ deve essere Standard o Enterprise, a seconda del tuo ambiente. _SERVICE\_INSTANCE\_NAME_ è dove inserisci il nome per il tuo nuovo servizio. _source\_service\_instance\_id_ è l'ID dell'istanza di servizio dell'origine del backup; può essere ottenuto eseguendo `ibmcloud cf service DISPLAY_NAME --guid`, dove _DISPLAY\_NAME_ è il nome del servizio da cui proviene il backup. 
   
   Gli utenti Enterprise dovranno anche specificare nell'oggetto JSON il cluster nel quale eseguire la distribuzione con il parametro `"cluster_id": "$CLUSTER_ID"`.
 
@@ -101,10 +103,10 @@ bx service create SERVICE PLAN SERVICE_INSTANCE_NAME -c '{"source_service_instan
 Alcuni upgrade di versione principale non sono disponibili nella distribuzione in esecuzione attuale. Dovrai eseguire il provisioning di un nuovo servizio che sta eseguendo la versione di cui è stato eseguito l'upgrade e migrare quindi in essa i tuoi dati utilizzando un backup. Questo processo è lo stesso di un ripristino di un backup di cui sopra, con l'unica differenza che specificherai la versione alla quale desideri eseguire l'upgrade.
 
 ``` 
-bx service create SERVICE PLAN SERVICE_INSTANCE_NAME -c '{"source_service_instance_id": "$SERVICE_INSTANCE_ID", "backup_id": ""$BACKUP_ID", "db_version":"$VERSION_NUMBER" }'
+ibmcloud service create SERVICE PLAN SERVICE_INSTANCE_NAME -c '{"source_service_instance_id": "$SERVICE_INSTANCE_ID", "backup_id": ""$BACKUP_ID", "db_version":"$VERSION_NUMBER" }'
 ```
 
 Ad esempio, il ripristino di una versione meno recente di un servizio {{site.data.keyword.composeForMongoDB}} a un nuovo servizio che esegue MongoDB 3.4.10 sarà simile a:
 ```
-bx service create compose-for-mongodb Standard migrated_mongo -c '{ "source_service_instance_id": "0269e284-dcac-4618-89a7-f79e3f1cea6a", "backup_id":"5a96d8a7e16c090018884566", "db_version":"3.4.10"  }'
+ibmcloud service create compose-for-mongodb Standard migrated_mongo -c '{ "source_service_instance_id": "0269e284-dcac-4618-89a7-f79e3f1cea6a", "backup_id":"5a96d8a7e16c090018884566", "db_version":"3.4.10"  }'
 ```

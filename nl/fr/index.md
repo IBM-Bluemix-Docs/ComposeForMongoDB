@@ -25,7 +25,7 @@ Vous pouvez créer un service {{site.data.keyword.composeForMongoDB}} à partir 
 
 Choisissez un nom de service ainsi qu'une région, une organisation et un espace dans lesquels mettre le service à disposition. Vous pouvez utiliser la zone **Select a database version** pour sélectionner parmi les versions de base de données disponibles.
 
-Lorsque vous mettez votre instance {{site.data.keyword.composeForMongoDB}} à disposition, vous avez le choix entre le plan *Standard* et le plan *Entreprise*. Avec le plan *Entreprise*, vous pouvez mettre votre instance {{site.data.keyword.composeForMongoDB}} à disposition dans un cluster {{site.data.keyword.composeEnterprise}} disponible. {{site.data.keyword.composeEnterprise}} offre la sécurité et l'isolement requis par les normes de conformité des entreprises et utilise un réseau dédié pour garantir les performances des bases de données déployées. Pour plus d'informations, voir la [documentation Compose - Entreprise](../ComposeEnterprise/index.html).
+Lorsque vous mettez votre instance {{site.data.keyword.composeForMongoDB}} à disposition, vous avez le choix entre le plan *Standard* et le plan *Entreprise*. Avec le plan *Entreprise*, vous pouvez mettre votre instance {{site.data.keyword.composeForMongoDB}} à disposition dans un cluster {{site.data.keyword.composeEnterprise}} disponible. {{site.data.keyword.composeEnterprise}} offre la sécurité et l'isolement requis par les normes de conformité des entreprises et utilise un réseau dédié pour garantir les performances des bases de données déployées. Pour plus d'informations, voir la documentation [{{site.data.keyword.composeEnterprise}} documentation](/docs/services/ComposeEnterprise/index.html).
 
 ## Gestion de {{site.data.keyword.composeForMongoDB}}
 
@@ -36,7 +36,7 @@ Vous pouvez gérer votre service depuis son tableau de bord. Vous y trouverez de
 
 Pour plus d'informations, voir [Paramètres](./dashboard-settings.html).
 
-{{site.data.keyword.composeForMongoDB}} repose sur les rôles Cloud Foundry pour la gestion de l'accès au service. Seuls les utilisateurs dotés du rôle Développeur peuvent voir ou utiliser le tableau de bord du service. Pour plus d'informations sur les rôles Cloud Foundry, voir les pages [Accès Cloud Foundry](https://console.bluemix.net/docs/iam/cfaccess.html#cfaccess) et [Gestion de l'accès Cloud Foundry](https://console.bluemix.net/docs/iam/mngcf.html#mngcf).
+{{site.data.keyword.composeForMongoDB}} repose sur les rôles Cloud Foundry pour la gestion de l'accès au service. Seuls les utilisateurs dotés du rôle Développeur peuvent voir ou utiliser le tableau de bord du service. Pour plus d'informations sur les rôles Cloud Foundry, voir les pages [Accès Cloud Foundry](https://console.{DomainName}/docs/iam/cfaccess.html#cfaccess) et [Gestion de l'accès Cloud Foundry](https://console.{DomainName}/docs/iam/mngcf.html#mngcf).
 {: .tip}
 
 ## Connexion à {{site.data.keyword.composeForMongoDB}}
@@ -53,4 +53,4 @@ Pour vous connecter à {{site.data.keyword.composeForMongoDB}} depuis l'extérie
 
 ## Création d'une application Web à l'aide d'une pile MEAN
 
-Vous pouvez utiliser {{site.data.keyword.composeForMongoDB}} dans le cadre d'une pile MEAN pour créer une application Web. Suivez la procédure décrite dans le tutoriel [Modern Web Application using MEAN stack](../../tutorials/mean-stack.html) pour créer une application Web composée d'une base de données Mongo, d'une infrastructure Web Express, d'une infrastructure frontale Angular et d'un contexte d'exécution Node.js.
+Vous pouvez utiliser {{site.data.keyword.composeForMongoDB}} dans le cadre d'une pile MEAN pour créer une application Web. Suivez la procédure décrite dans le tutoriel [Modern Web Application using MEAN stack](/docs/tutorials/mean-stack.html) pour créer une application Web composée d'une base de données Mongo, d'une infrastructure Web Express, d'une infrastructure frontale Angular et d'un contexte d'exécution Node.js.

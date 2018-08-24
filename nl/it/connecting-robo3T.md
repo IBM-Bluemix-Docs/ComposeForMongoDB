@@ -21,7 +21,7 @@ Robo 3T (precedentemente Robomongo) è una GUI leggera e gratuita per MongoDB. I
 
   ![La pagina della panoramica](./images/service_overview.png)
 
-3. Nel pannello _Connection Strings_, fai clic su **SSL Certificates** per aprire la scheda dei certificati SSL. Salva il certificato SSL del tuo servizio. Innanzitutto, copia il certificato SSL utilizzando il pulsante di copia nell'angolo in alto a destra del pannello del certificato SSL:
+3. Nel pannello _Connection Strings_, fai clic su **SSL Certificates** per aprire la scheda SSL Certificates. Salva il certificato SSL del tuo servizio. Innanzitutto, copia il certificato SSL utilizzando il pulsante di copia nell'angolo in alto a destra del pannello del certificato SSL:
 
     ![Il pulsante di copia](./images/copy_icon.png)
 

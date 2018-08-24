@@ -61,4 +61,4 @@ Einträge in die Whitelist werden automatisch zu den Compose-Servern hinzugefüg
 
 ### Entfernen
 Klicken Sie, wenn Sie eine IP-Adresse oder Netzmaske aus der Whitelist entfernen wollen, auf den neben ihr angezeigten Eintrag *Entfernen*.
-Wenn alle Einträge in der Whitelist entfernt werden, wird die Whitelist inaktiviert und die TCP-Zugriffsportale oder Mongos-Routerportale akzeptieren alle IP-Adressen.
+Wenn alle Einträge in der Whitelist entfernt werden, wird die Whitelist inaktiviert und die TCP-Zugriffsportale oder mongos-Routerportale akzeptieren alle IP-Adressen.

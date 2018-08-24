@@ -25,7 +25,7 @@ lastupdated: "2018-03-26"
 
 サービス名、およびサービスをプロビジョンする地域、組織、スペースを選択します。 **「データベースのバージョンの選択 (Select a database version)」**フィールドを使用して、データベースの使用できるバージョンを選択できます。
 
-{{site.data.keyword.composeForMongoDB}} インスタンスのプロビジョンでは、*標準*プランと*エンタープライズ*・プランのどちらかを選択できます。 *エンタープライズ*・プランの場合は、{{site.data.keyword.composeForMongoDB}} インスタンスを有効な {{site.data.keyword.composeEnterprise}} クラスターにプロビジョンできます。 {{site.data.keyword.composeEnterprise}} は、企業コンプライアンスで要求されるセキュリティーと分離を提供し、専用ネットワーキングを使用してデプロイ済みデータベースのパフォーマンスを確保します。 詳しくは、[Compose Enterprise 文書](../ComposeEnterprise/index.html)を参照してください。
+{{site.data.keyword.composeForMongoDB}} インスタンスのプロビジョンでは、*標準*プランと*エンタープライズ*・プランのどちらかを選択できます。 *エンタープライズ*・プランの場合は、{{site.data.keyword.composeForMongoDB}} インスタンスを有効な {{site.data.keyword.composeEnterprise}} クラスターにプロビジョンできます。 {{site.data.keyword.composeEnterprise}} は、企業コンプライアンスで要求されるセキュリティーと分離を提供し、専用ネットワーキングを使用してデプロイ済みデータベースのパフォーマンスを確保します。 詳しくは、[{{site.data.keyword.composeEnterprise}} 文書](/docs/services/ComposeEnterprise/index.html)を参照してください。
 
 ## {{site.data.keyword.composeForMongoDB}} の管理
 
@@ -36,7 +36,7 @@ lastupdated: "2018-03-26"
 
 詳しくは、[設定](./dashboard-settings.html)を参照してください。
 
-{{site.data.keyword.composeForMongoDB}} は、Cloud Foundry の役割を利用して、サービスへのアクセスを管理します。開発者役割を持つユーザーのみが、サービス・ダッシュボードを表示または使用できます。Cloud Foundry の役割について詳しくは、『[Cloud Foundry アクセス権限](https://console.bluemix.net/docs/iam/cfaccess.html#cfaccess)』および 『[Cloud Foundry のアクセス権限の管理](https://console.bluemix.net/docs/iam/mngcf.html#mngcf)』のページを参照してください。
+{{site.data.keyword.composeForMongoDB}} は、Cloud Foundry の役割を利用して、サービスへのアクセスを管理します。 開発者役割を持つユーザーのみが、サービス・ダッシュボードを表示または使用できます。 Cloud Foundry の役割について詳しくは、『[Cloud Foundry アクセス権限](https://console.{DomainName}/docs/iam/cfaccess.html#cfaccess)』および 『[Cloud Foundry のアクセス権限の管理](https://console.{DomainName}/docs/iam/mngcf.html#mngcf)』のページを参照してください。
 {: .tip}
 
 ## {{site.data.keyword.composeForMongoDB}} への接続
@@ -53,4 +53,4 @@ lastupdated: "2018-03-26"
 
 ## MEAN スタックを使用した Web アプリケーションの作成
 
-{{site.data.keyword.composeForMongoDB}} を MEAN スタックの一部として使用して、Web アプリケーションを作成できます。 [MEAN スタックを使用した最先端 Web アプリケーションの作成](../../tutorials/mean-stack.html)のチュートリアルの手順に従って、 Mongo DB、Express Web フレームワーク、Angular フロントエンド・フレームワーク、Node.js ランタイムで構成される Web アプリケーションを作成できます。
+{{site.data.keyword.composeForMongoDB}} を MEAN スタックの一部として使用して、Web アプリケーションを作成できます。 [MEAN スタックを使用した最先端 Web アプリケーションの作成](/docs/tutorials/mean-stack.html)のチュートリアルの手順に従って、 Mongo DB、Express Web フレームワーク、Angular フロントエンド・フレームワーク、Node.js ランタイムで構成される Web アプリケーションを作成できます。

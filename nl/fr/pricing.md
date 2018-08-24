@@ -14,22 +14,23 @@ lastupdated: "2018-01-03"
 # Tarification
 {: #pricing}
 
-## Configuration de base
+## Configuration de base
+
 Un service {{site.data.keyword.composeForMongoDB_full}} démarre avec un jeu de répliques de trois noeuds de données, dans une configuration à une seule partition. Chaque noeud dispose de 1 Go de stockage et de 102 Mo de mémoire, ce qui équivaut à 1 unité de ressources. Le service _inclut_ la réplication et la haute disponibilité, de sorte que chaque unité et le prix unitaire _incluent_ le coût des ressources dans les trois noeuds.
 
 Deux routeurs Mongo dotés chacun de 64 Mo de mémoire sont également inclus pour la gestion des connexions et de la haute disponibilité.
 
-### Coût
 Le prix de la configuration du service de base est défini. Consultez les vignettes du catalogue sur {{site.data.keyword.cloud_notm}} pour connaître la tarification de base dans votre devise locale. Par exemple, le prix de base en dollars US est de 18 $/mois.
 
+## Augmentation des ressources
 
-## Options d'extension
 Si vous avez besoin de davantage de mémoire ou de stockage pour votre service, vous pouvez augmenter les ressources allouées selon un rapport de 10 pour 1 en stockage sur disque et unité de mémoire. L'augmentation du disque alloué au déploiement augmente également la quantité de mémoire RAM allouée. Une unité {{site.data.keyword.composeForMongoDB}} se compose de 1 Go de stockage et de 102 Mo de mémoire, de sorte que chaque unité et le prix unitaire _incluent_ le coût d'accroissement des ressources dans les trois noeuds de données. 
 
-### Coût
+## Calcul du coût de votre déploiement
+{: #tiered-pricing}
+
 Chaque unité supplémentaire (1 Go de stockage et 102 Mo de mémoire) a un prix unitaire indiqué dans votre devise locale dans la vignette du catalogue {{site.data.keyword.cloud_notm}} du service. En dollars US, chaque unité supplémentaire coûte 18 $. Le prix unitaire diminue proportionnellement à l'augmentation de la taille _totale_ de vos services {{site.data.keyword.composeForMongoDB}}, selon le barème indiqué dans le tableau de tarification différenciée.
 
-### Tarification différenciée
 Nombre d'unités|Prix unitaire
 ----------|-----------
 1 - 9 unités|Prix unitaire de base -- soit 18,00 USD/unité

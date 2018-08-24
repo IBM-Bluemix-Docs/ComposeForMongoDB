@@ -203,7 +203,7 @@ MongoClient.connect(process.env.MONGODB_URL, options, function(err, db) {
 });
 ```
 
-如果我們想要使用伺服器的 SSL 公用憑證（在此範例中，儲存在 "servercert.crt" 檔案中），則我們需要讀取它並將其併入選項中，同時將 sslValidate 翻轉為 true，如下所示：
+如果我們想要使用伺服器的 SSL 公用憑證（在此範例中，儲存在 "servercert.crt" 檔案中），則我們需要讀取它並將其包含在選項中，同時將 sslValidate 翻轉為 true，如下所示：
 
 ```javascript
 var MongoClient = require('mongodb').MongoClient;

@@ -36,10 +36,12 @@ Klicken Sie in eine Zeile, um die Optionen für die entsprechende verfügbare Si
 
 ### API verwenden, um vorhandene Backups anzuzeigen
 
-Eine Liste der Backups steht am Endpunkt `GET /2016-07/deployments/:id/backups` zur Verfügung. Die Basisendpunkte mit derServiceinstanz-ID und der Bereitstellungs-ID werden beide in der _Übersicht_ des Service angezeigt. Beispiel: 
-``` 
+Eine Liste der Backups steht am Endpunkt `GET /2016-07/deployments/:id/backups` zur Verfügung. Die Basisendpunkte mit der Serviceinstanz-ID und der Bereitstellungs-ID werden beide in der _Übersicht_ des Service angezeigt. Beispiel: 
+
+```
 https://composebroker-dashboard-public.mybluemix.net/api/2016-07/instances/$INSTANCE_ID/deployments/$DEPLOYMENT_ID/backups
-```  
+```
+{: codeblock}
 
 ## Manuelle Sicherung erstellen
 
@@ -65,7 +67,7 @@ Gehen Sie wie folgt vor, um eine lokale Wiederherstellung Ihrer Datenbanken und 
 4. Starten Sie mit dem Befehl `mongod --dbpath ./db` eine lokale MongoDB-Instanz. Dabei ist './db' das Verzeichnis, das die extrahierten Daten enthält.
 
 ### API verwenden, um eine Sicherung herunterzuladen
-Suchen Sie die Sicherung, die Sie wiederherstellen möchten auf der Seite _Sicherungen_ in Ihrem Service aus und kopieren Sie die Sicherungs-ID (backup_id) oder verwenden Sie `GET /2016-07/deployments/:id/backups`, um eine Sicherung und die zugehörige Sicherungs-ID (backup_id) über die Compose-API zu finden. Anschließend verwenden Sie die Sicherungs-ID (backup_id), um Informationen zu suchen und einen Link für eine bestimmte Sicherung herunterzuladen: `GET /2016-07/deployments/:id/backups/:backup_id`.
+Suchen Sie auf der Seite _Sicherungen_ für Ihren Service die Sicherung aus, die Sie wiederherstellen möchten, und kopieren Sie die Angabe für 'backup_id' oder verwenden Sie `GET /2016-07/deployments/:id/backups`, um eine Sicherung und die zugehörige Sicherungs-ID über die Compose-API zu suchen. Anschließend verwenden Sie die Sicherungs-ID (backup_id), um Informationen zu suchen und einen Link für eine bestimmte Sicherung herunterzuladen: `GET /2016-07/deployments/:id/backups/:backup_id`.
 
 ## Sicherung wiederherstellen
 
@@ -73,37 +75,37 @@ Führen Sie zum Wiederherstellen einer Sicherung in einer neuen Serviceinstanz d
 
 ### Wiederherstellung über die {{site.data.keyword.cloud_notm}}-CLI
 
-Führen Sie die folgenden Schritte aus, um eine Sicherung aus einem aktiven Service mithilfe der {{site.data.keyword.cloud_notm}}-CLI in einem neuen Service wiederherzustellen.  
-1. Sie müssen die CLI [herunterladen und installieren](https://console.bluemix.net/docs/cli/index.html#overview). 
-2. Suchen Sie die Sicherung, die Sie wiederherstellen möchten auf der Seite _Sicherungen_ in Ihrem Service aus und kopieren Sie die Sicherungs-ID.   
+Führen Sie die folgenden Schritte aus, um eine Sicherung aus einem aktiven Service mithilfe der {{site.data.keyword.cloud_notm}}-CLI in einem neuen Service wiederherzustellen. 
+1. Sie müssen die CLI [herunterladen und installieren](https://console.{DomainName}/docs/cli/index.html#overview). 
+2. Suchen Sie auf der Seite _Sicherungen_ in Ihrem Service die Sicherung aus, die Sie wiederherstellen möchten, und kopieren Sie die Sicherungs-ID.  
   **ODER**  
   Suchen Sie eine Sicherung und die zugehörige ID über die Compose-API mithilfe von `GET /2016-07/deployments/:id/backups`. Der Basisendpunkt und die Serviceinstanz-ID werden beide in der _Übersicht_ des Service angezeigt. Beispiel: 
   ``` 
   https://composebroker-dashboard-public.mybluemix.net/api/2016-07/instances/$INSTANCE_ID/deployments/$DEPLOYMENT_ID/backups
   ```  
-  Die Antwort enthält eine Liste aller verfügbarer Sicherungen für diese Serviceinstanz. Wählen Sie die Sicherung aus, die Sie wiederherstellen möchten, und kopieren Sie die zugehörige ID. 
+  Die Antwort enthält eine Liste aller verfügbaren Sicherungen für diese Serviceinstanz. Wählen Sie die Sicherung aus, die Sie wiederherstellen möchten, und kopieren Sie die zugehörige ID.
 
-3. Melden Sie sich mit dem entsprechenden Konto und den zugehörigen Berechtigungsnachweisen an. `bx login` (oder `bx login -help` zur Anzeige aller Anmeldeoptionen).
+3. Melden Sie sich mit dem entsprechenden Konto und den zugehörigen Berechtigungsnachweisen an. Verwenden Sie hierfür den Befehl `ibmcloud login` (oder `ibmcloud login -help`, damit alle Anmeldeoptionen angezeigt werden).
 
-4. Wechseln Sie zu Ihrer Organisation und Ihrem Bereich `bx target -o "$YOUR_ORG" -s "YOUR_SPACE"`
+4. Wechseln Sie mit `ibmcloud target -o "$YOUR_ORG" -s "YOUR_SPACE"` zu Ihrer Organisation und Ihrem Bereich.
 
 5. Verwenden Sie den Befehl `service create`, um einen neuen Bereich bereitzustellen und stellen Sie den Quellenservice und die spezifische Sicherung zur Verfügung, die Sie in einem JSON-Objekt wiederherstellen. Beispiel:
 ``` 
-bx service create SERVICE PLAN SERVICE_INSTANCE_NAME -c '{"source_service_instance_id": "$SERVICE_INSTANCE_ID", "backup_id": "$BACKUP_ID" }'
+ibmcloud service create SERVICE PLAN SERVICE_INSTANCE_NAME -c '{"source_service_instance_id": "$SERVICE_INSTANCE_ID", "backup_id": "$BACKUP_ID" }'
 ```
-  Für das Feld _SERVICE_ sollte 'compose-for-mongodb' und für das Feld _PLAN_ sollte abhängig von Ihrer Umgebung entweder 'Standard' oder 'Enterprise' angegeben sein. In _SERVICE\_INSTANCE\_NAME_ geben Sie den Namen für Ihren neuen Service an. _source\_service\_instance\_id_ ist die Serviceinstanz-ID der Quelle der Sicherung. Diese kann durch die Ausführung von `bx cf service DISPLAY_NAME --guid` abgerufen werden, wobei _DISPLAY\_NAME_ der Name des Service ist, von dem die Sicherung stammt.  
+  Für das Feld _SERVICE_ sollte 'compose-for-mongodb' und für das Feld _PLAN_ sollte abhängig von Ihrer Umgebung entweder 'Standard' oder 'Enterprise' angegeben sein. In _SERVICE\_INSTANCE\_NAME_ geben Sie den Namen für Ihren neuen Service an. _source\_service\_instance\_id_ ist die Serviceinstanz-ID der Quelle der Sicherung. Diese kann durch Ausführen von `ibmcloud cf service DISPLAY_NAME --guid` abgerufen werden, wobei _DISPLAY\_NAME_ der Name des Service ist, von dem die Sicherung stammt. 
   
-  Enterprise-Benutzer müssen ferner angeben, welcher Cluster in dem JSON-Objekt mit dem Parameter `"cluster_id": "$CLUSTER_ID"` bereitgestellt werden soll. 
+  Enterprise-Benutzer müssen ferner angeben, welcher Cluster in dem JSON-Objekt mit dem Parameter `"cluster_id": "$CLUSTER_ID"` bereitgestellt werden soll.
 
 ### Migration auf eine neue Version
 
-Einige Upgrades der Hauptversion sind in der aktuell ausgeführten Bereitstellung nicht verfügbar. Sie müssen einen neuen Service bereitstellen, der die aktualisierte Version ausführt und anschließend Ihre Daten mithilfe einer Sicherung in diese neue Version migrieren. Dieser Prozess entspricht der Wiederherstellung einer Sicherung wie oben beschrieben. Der einzige Unterschied besteht darin, dass Sie die Version angeben, auf die Sie ein Upgrade durchführen möchten. 
+Einige Upgrades der übergeordneten Version sind in der aktuell ausgeführten Bereitstellung nicht verfügbar. Sie müssen einen neuen Service bereitstellen, auf dem die per Upgrade aktualisierte Version ausgeführt wird, und anschließend Ihre Daten mit einer Sicherung in diesen neuen Service migrieren. Dieser Prozess entspricht der zuvor beschriebenen Wiederherstellung einer Sicherung, jedoch mit dem Unterschied, dass Sie die Version angeben, auf die Sie das Upgrade durchführen wollen.
 
 ``` 
-bx service create SERVICE PLAN SERVICE_INSTANCE_NAME -c '{"source_service_instance_id": "$SERVICE_INSTANCE_ID", "backup_id": ""$BACKUP_ID", "db_version":"$VERSION_NUMBER" }'
+ibmcloud service create SERVICE PLAN SERVICE_INSTANCE_NAME -c '{"source_service_instance_id": "$SERVICE_INSTANCE_ID", "backup_id": ""$BACKUP_ID", "db_version":"$VERSION_NUMBER" }'
 ```
 
-Die Wiederherstellung einer älteren Version eines {{site.data.keyword.composeForMongoDB}}-Service auf einem neuen Service unter Ausführung von MongoDB 3.4.10 sieht wie folgt aus: 
+Die Wiederherstellung einer älteren Version eines {{site.data.keyword.composeForMongoDB}}-Service auf einem neuen Service unter Ausführung von MongoDB 3.4.10 sieht wie folgt aus:
 ```
-bx service create compose-for-mongodb Standard migrated_mongo -c '{ "source_service_instance_id": "0269e284-dcac-4618-89a7-f79e3f1cea6a", "backup_id":"5a96d8a7e16c090018884566", "db_version":"3.4.10"  }'
+ibmcloud service create compose-for-mongodb Standard migrated_mongo -c '{ "source_service_instance_id": "0269e284-dcac-4618-89a7-f79e3f1cea6a", "backup_id":"5a96d8a7e16c090018884566", "db_version":"3.4.10"  }'
 ```

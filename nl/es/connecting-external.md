@@ -664,7 +664,7 @@ public ActionResult Index()
 ```
 Correcto.
 
-Ahora tenemos una conexión con nuestra base de datos y un método para distribuir el contenido a la vista. Todo los que tenemos que hacer es incorporar información a nuestro modelo y pasarlo a la vista.
+Ahora tenemos una conexión con nuestra base de datos y un método para distribuir el contenido a la vista. Todo lo que tenemos que hacer es incorporar información a nuestro modelo y pasarlo a la vista.
 
 ### Visualización de datos
 
