@@ -20,7 +20,7 @@ Deployable Versions| Preferred Version
 
 ## Preferred Version
 
-The preferred version is typically the newest version of the MongoDB database that is available for {{site.data.keyword.composeForMongoDB}}. It is the version that is the default in the drop-down version selector on the catalog page. It is also the version that is automatically provisioned by API if no version is specified in the call.
+The preferred version is typically the newest version of the MongoDB database that is available for {{site.data.keyword.composeForMongoDB}}. It's the default in the drop-down version selector on the catalog page, and the version that is automatically provisioned by API if no version is specified in the call.
 
 ### New Preferred Version Protocol
 
@@ -28,5 +28,5 @@ When a new version is made available, its release is announced and it is availab
 
 The list of versions available to provision is on the {{site.data.keyword.composeForMongoDB}} [catalog page](https://console.{DomainName}/catalog/services/compose-for-mongodb).
 
-To get a current list of available versions for your {{site.data.keyword.composeForMongoDB}} service you can use the 
+To get a current list of available versions for your {{site.data.keyword.composeForMongoDB}} service, you can use the 
 [GET /2016-07/deployments/:id/versions](https://apidocs.compose.com/v1.0/reference#2016-07-get-deployments-versions) endpoint.

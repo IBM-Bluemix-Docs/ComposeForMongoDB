@@ -13,7 +13,7 @@ lastupdated: "2018-05-07"
 
 # Service Overview
 
-The _Overview_ page shows you information about your {{site.data.keyword.cloud}} Compose database. The overview includes essential identifying information and current resource usage. You'll also find a section for connection strings that you can use with tools or make use of tools to connect to your database.
+The _Overview_ page shows you information about your {{site.data.keyword.cloud}} Compose database. The overview includes essential identifying information and current resource usage. You'll also find a section for connection strings that you can use to connect to your database.
 
 ## Deployment Details
 
@@ -55,7 +55,7 @@ export MONGODB_URL="<CONNECTION STRING>"
 
 ### Command Line
 
-The **Command Line** is a preformatted command which will invoke `mongo` with the correct parameters. To use it, you'll need to have mongo tools installed on the local system. You can find out more about how to do this in [Connecting an external application](./connecting-external.html).
+The **Command Line** is a preformatted command, which invokes `mongo` with the correct parameters. To use it, you need to have mongo tools installed on the local system. You can find out more about how to do this in [Connecting an external application](./connecting-external.html).
 
 ### SSL Certificate
 

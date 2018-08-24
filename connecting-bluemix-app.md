@@ -13,11 +13,11 @@ lastupdated: "2017-06-17"
 
 # Connecting an {{site.data.keyword.cloud_notm}} application
 
-To connect an {{site.data.keyword.cloud}} application to your service, use the service credentials that are created when the service is provisioned. The sample app demonstrates how to use Node.js to connect to an {{site.data.keyword.composeForMongoDB_full}} service using the provided credentials, and how to create a database and read from and write to the database.
+To connect an {{site.data.keyword.cloud}} application to your service, use the service credentials that are created when the service is provisioned.
 
-## Connecting using the 'Hello World' sample app
+## Using the 'Hello World' sample app
 
-The [compose-mongodb-helloworld-nodejs](https://github.com/IBM-Cloud/compose-mongodb-helloworld-nodejs) sample app demonstrates how to use Node.js to connect to a {{site.data.keyword.composeForMongoDB}} service using the provided credentials. The application creates, reads from, and writes to a database.
+The [sample app](https://github.com/IBM-Cloud/compose-mongodb-helloworld-nodejs) demonstrates how to use Node.js and your service credentials to connect to a {{site.data.keyword.composeForMongoDB}} service. The application uses a web interface to create, read from, and write to a database.
 
 Download the sample app and follow the instructions in the readme file. Then, in your application details page in {{site.data.keyword.cloud_notm}}, click **View APP** to view the contents of the *examples* table.
 
@@ -25,9 +25,9 @@ Download the sample app and follow the instructions in the readme file. Then, in
 
 Field Name|Description
 ----------|-----------
-`uri`|The URI to be used when connecting to the service. `uri` includes the schema (`mongodb:`), admin user name and password, host name of server, port number to connect to, database name, and `?ssl=true` to enable SSL connections.
+`uri`|The URI to be used when connecting to the service. The URI includes the schema (`mongodb:`), admin user name and password, host name of server, port number to connect to, database name, and `?ssl=true` to enable SSL connections.
 `uri_cli`|A `mongo` shell command line that connects to the database instance.
-`ca_certificate_base64`|A self-signed certificate that is used to confirm that an app is connecting to the appropriate server. The certificate is base64-encoded. You must decode the key before using it, as shown in the sample app.
+`ca_certificate_base64`|A self-signed certificate that is used to confirm that an app is connecting to the appropriate server. The certificate is base64-encoded. You must decode the key before you use it, as shown in the sample app.
 `deployment_id`|An internal identifier for the service as created within Compose.
 `db_type`|The type of database that is offered by the service: in this case, `mongodb`.
 `name`|The database deployment name.
