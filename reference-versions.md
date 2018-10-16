@@ -15,7 +15,7 @@ lastupdated: "2018-06-05"
 
 Deployable Versions| Preferred Version
 ----------|-----------
-3.2.10, 3.2.11, 3.2.18, 3.4.10 | 3.2.18
+3.2.10, 3.2.11, 3.2.18, 3.4.10 | 3.4.10
 {: caption="Table 1. MongoDB versions" caption-side="top"}
 
 ## Preferred Version
