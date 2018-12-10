@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2016,2018
-lastupdated: "2018-06-08"
+lastupdated: "2018-12-06"
 ---
 
 {:new_window: target="_blank"}
@@ -18,14 +18,14 @@ Database connections in MongoDB sharded clusters are handled by mongos routers. 
 
 Almost all MongoDB drivers handle multiple connection points but failover at the client side is the responsibility of the application designer. Unless you are working with a driver that completely handles failover errors, you should:
 * Work with a driver that accepts multiple endpoints in its connection configuration.
-* Ensure your applications calls to read or write to the database react to errors appropriately. Options include:
+* Ensure your applications' calls to read or write to the database react to errors appropriately. Options include:
   + Logging the error and reconnecting.
   + Reconnecting and retrying the operation that caused the error.
   + Queuing the failed operation and scheduling reconnection.
 
 ## Encryption in Transit
 
-All {{site.data.keyword.composeForMongoDB}} HAProxy portals are TLS/SSL-enabled, and support TLS version 1.2. The certificates for the service are self-signed certificates. You might need to save a local copy of the certificate for your service and provide its location to your applications driver to make a secure connection.
+All {{site.data.keyword.composeForMongoDB}} HAProxy portals are TLS/SSL-enabled, and support TLS version 1.2. All deployments are issued [Let's Encrypt certificates](./connecting-certificates.html), which are part of most environment's certificate stores. Some older deployments have self-signed certificates. For these deployments you may need a local copy of the certificate for your service and to provide its location to your applications driver to make a secure connection.
 
 ## Connection Limits
 
@@ -38,9 +38,9 @@ The mongos routers manage the lifecycle of connections between the server and cl
 Setting | Value | Applies
 ----------|-----------|-----------
 `client` | 5 m | When the client is expected to acknowledge or send data.
-`connect` | 4s | When a connection is being made between the proxy and the server.
+`connect` | 4 s | When a connection is being made between the proxy and the server.
 `server` | 5 m | When the server is expected to acknowledge or send data.
-`tunnel` | 1d | When a bidirectional connection is established between a client and a server, and the connection remains inactive in both directions.
+`tunnel` | 1 d | When a bidirectional connection is established between a client and a server, and the connection remains inactive in both directions.
 `client-fin` | 1 h | When the client is expected to acknowledge or send data while one direction is already shut down.
-`check` | 5s | As a secondary timeout check when a connection is being made between the proxy and the server.
+`check` | 5 s | As a secondary timeout check when a connection is being made between the proxy and the server.
 {: caption="Table 1. Mongos router timeouts" caption-side="top"}

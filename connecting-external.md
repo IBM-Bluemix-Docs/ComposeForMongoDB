@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017,2018
-lastupdated: "2017-06-17"
+lastupdated: "2018-12-05"
 ---
 
 {:new_window: target="_blank"}
@@ -26,6 +26,10 @@ For in depth application and driver support, check out the appropriate documenta
 
 If you're looking for languages that are not see covered here, try the [MongoDB.org Driver List](http://www.mongodb.org/display/DOCS/Drivers).
 {: tip}
+
+## Certificates
+
+All {{site.data.keyword.composeForMongoDB_full}} have TLS/SSL enabled and are issued Let's Encrypt certificates. CA-backed certificates are often supported by environments without any extra configuration steps. For the applications or drivers that don't have CA certificate support, see the [Let's Encrypt Certificates page](./connecting-certificates.html) and consult the specific language and driver documentation.
 
 ## Go / Golang
 
@@ -98,72 +102,7 @@ func main() {
 }
 
 ```
-The line that removes "?ssl=true" from the URI (19) is needed as mgo will currently error if given the standard parameter for SSL/TLS connections. To connect and verify the SSL Public Certificate of the server is essentially the same, but needs some additional steps to load the certificate, in this case from a file "servercert.crt":
-
-```go
-package main
-
-import (
-	"crypto/tls"
-	"crypto/x509"
-	"io/ioutil"
-
-	"fmt"
-	"net"
-	"os"
-	"strings"
-
-	"gopkg.in/mgo.v2"
-)
-
-func main() {
-	uri := os.Getenv("MONGODB_URL")
-	if uri == "" {
-		fmt.Println("No connection string provided - set MONGODB_URL")
-		os.Exit(1)
-	}
-	uri = strings.TrimSuffix(uri, "?ssl=true")
-
-	roots := x509.NewCertPool()
-
-	if ca, err := ioutil.ReadFile("servercert.crt"); err == nil {
-		roots.AppendCertsFromPEM(ca)
-	}
-
-	tlsConfig := &tls.Config{}
-	tlsConfig.RootCAs = roots
-
-	dialInfo, err := mgo.ParseURL(uri)
-
-	if err != nil {
-		fmt.Println("Failed to parse URI: ", err)
-		os.Exit(1)
-	}
-
-	dialInfo.DialServer = func(addr *mgo.ServerAddr) (net.Conn, error) {
-		conn, err := tls.Dial("tcp", addr.String(), tlsConfig)
-		return conn, err
-	}
-
-	session, err := mgo.DialWithInfo(dialInfo)
-	if err != nil {
-		fmt.Println("Failed to connect: ", err)
-		os.Exit(1)
-	}
-
-	defer session.Close()
-
-	dbnames, err := session.DB("").CollectionNames()
-	if err != nil {
-		fmt.Println("Couldn't query for collections names: ", err)
-		os.Exit(1)
-	}
-
-	fmt.Println(dbnames)
-
-}
-
-```
+The line that removes "?ssl=true" from the URI (19) is needed as mgo will currently error if given the standard parameter for SSL/TLS connections. 
 
 ## Node.js / Native
 
@@ -202,35 +141,6 @@ MongoClient.connect(process.env.MONGODB_URL, options, function(err, db) {
 });
 ```
 
-If we want to use the server's SSL public certificate (stored in a file "servercert.crt" in this example) then we need to read it and include it in the options, while flipping sslValidate to true like this:
-
-```javascript
-var MongoClient = require('mongodb').MongoClient;
-var assert = require('assert');
-var fs = require('fs');
-
-var ca = [fs.readFileSync(__dirname + "/servercert.crt")];
-
-var options = {
-    mongos: {
-        ssl: true,
-        sslValidate: true,
-        sslCA:ca,
-    }
-}
-
-MongoClient.connect(process.env.MONGODB_URL, options, function(err, db) {
-    assert.equal(null, err);
-    db.listCollections({}).toArray(function(err, collections) {
-        assert.equal(null, err);
-        collections.forEach(function(collection) {
-            console.log(collection);
-        });
-        db.close();
-        process.exit(0);
-    })
-});
-```
 If you prefer a more ES6 flavor to your examples try:
 ```javascript
 const MongoClient = require('mongodb').MongoClient;
@@ -314,44 +224,6 @@ This code uses the [mongoose](http://mongoosejs.com/) driver. Like all good Node
 ```shell
 npm install mongoose
 ```
-### Connecting with Mongoose (Javascript)
-
-The basic technique is the same as the Node.js/direct examples above. Create an options map, add in the requires SSL parameters and then pass that options map with the URL for MongoDB to the `mongoose.connect()` method. In the below example, we connect with a certificate and, again, list the available collections:
-```javascript
-var mongoose = require('mongoose');
-var assert = require('assert');
-var fs = require('fs');
-
-var ca = [ fs.readFileSync(__dirname + "/servercert.crt") ];
-
-var options = {
-    mongos: {
-      ssl: true,
-      sslValidate: true,
-      sslCA: ca
-    }
-}
-
-// If the connection throws an error
-mongoose.connection.on('error',function (err) {
-  console.log('Mongoose default connection error: ' + err);
-});
-
-mongoose.connection.on('open', function (err) {
-    assert.equal(null, err);
-    mongoose.connection.db.listCollections().toArray(function(err, collections) {
-        assert.equal(null, err);
-        collections.forEach(function(collection) {
-            console.log(collection);
-        });
-        mongoose.connection.db.close();
-        process.exit(0);
-    })
-});
-
-// Let's open that connection
-mongoose.connect(process.env.MONGODB_URL, options);
-```
 
 ## Ruby
 
@@ -361,7 +233,6 @@ MONGODB_URL="mongodb://user:pass@server.compose.io/db_name"
 ```
 If you are using Ruby (along with frameworks like Ruby on Rails, Sinatra, etc.), you can start out by installing the `mongo` (2.x) gem. It should go without saying, but you will need [RubyGems](http://rubygems.org). If you are using a pre-1.9 Ruby, you'll need to add `require 'rubygems'` at the start of the examples.
 
- Without using a certificate, the code is simply:
 ```ruby
 require 'mongo'
 
@@ -379,25 +250,6 @@ collections = db.collection_names
 puts collections # ["coll1", "coll2", ...]
 ```
 The Logger line mutes the driver's debug messages (there's a lot of them). Comment it out if you want to see more.
-
-To connect with a certificate, the code is similar, but more option settings are needed when connecting:
-```ruby
-require 'mongo'
-
-def client
-    @client ||= Mongo::Client.new(ENV['MONGODB_URL'],
-                ssl: true,
-                ssl_verify: true,
-                ssl_cert: './servercert.crt',
-                ssl_cacert: './servercert.crt')
-end
-
-db = client.database
-
-collections = db.collection_names
-puts collections # ["coll1", "coll2", ...]
-```
-Note the `servercert.crt` file name being passed twice to denote the certificate is also its own authority.
 
 ## Python
 
@@ -417,18 +269,6 @@ db = client.get_default_database()
 print db.collection_names()
 
 ```
-To use the server's SSL certificate, it's simply a matter of adding it as a parameter like so:
-```python
-import os
-import pymongo
-import ssl
-
-MONGODB_URL = os.environ.get('MONGODB_URL')
-client = pymongo.MongoClient(MONGODB_URL,ssl_ca_certs="./servercert.crt")
-db = client.get_default_database()
-print db.collection_names()
-```
-And then, you should be on your way.
 
 ## PHP, MongoDB, and Compose
 

@@ -23,7 +23,7 @@ Compose For MongoDB
 	Connecting to Compose for MongoDB
 		connecting-bluemix-app.md
 		connecting-external.md
-		connecting-robo3T.md
+		connecting-certificates.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}

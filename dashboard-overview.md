@@ -13,7 +13,7 @@ lastupdated: "2018-05-07"
 
 # Service Overview
 
-The _Overview_ page shows you information about your {{site.data.keyword.cloud}} Compose database. The overview includes essential identifying information and current resource usage. You'll also find a section for connection strings that you can use to connect to your database.
+The _Overview_ page shows you information about your {{site.data.keyword.cloud}} Compose database. The overview includes essential identifying information and current resource usage. It also contains a section for connection strings that you can use to connect to your database.
 
 ## Deployment Details
 
@@ -31,7 +31,7 @@ An internal identifier for the service.
 
 ### Usage
 
-The size of your database and the amount of storage provided by your service plan.
+The size of your database and the amount of storage that is provided by your service plan.
 
 ## Recent Tasks
 
@@ -43,11 +43,11 @@ You can find available connection strings for your service in a set of tabs in t
 
 ### HTTPS
 
-The **HTTPS** connection string can be used by some client libraries and contains all the information needed for other libraries to connect.
+The **HTTPS** connection string can be used by some client libraries and contains all the information that is needed for other libraries to connect.
 
 ### Connection String
 
-You can use your connection string directly in an application to connect to {{site.data.keyword.composeForMongoDB}} or set it as an environment variable. To do this, execute the following in the shell:
+You can use your connection string directly in an application to connect to {{site.data.keyword.composeForMongoDB}} or set it as an environment variable. To set the connection string in your environment, execute the `export` command in the shell:
 
 ```
 export MONGODB_URL="<CONNECTION STRING>"
@@ -55,12 +55,15 @@ export MONGODB_URL="<CONNECTION STRING>"
 
 ### Command Line
 
-The **Command Line** is a preformatted command, which invokes `mongo` with the correct parameters. To use it, you need to have mongo tools installed on the local system. You can find out more about how to do this in [Connecting an external application](./connecting-external.html).
+The **Command Line** is a preformatted command, which invokes `mongo` with the correct parameters. To use it, you need the Mongo tools installed on the local system. You can find out more in [Connecting an external application](./connecting-external.html).
 
 ### SSL Certificate
 
 Your Compose {{site.data.keyword.cloud_notm}} service provides you with an SSL certificate that you can use to connect to your database.
 
+## Security 
+
+Encryption at rest is enabled for all {{site.data.keyword.composeForMongoDB}} deployments.
 
 ## Instance Administration API
 
@@ -68,7 +71,7 @@ You can manage your {{site.data.keyword.composeForMongoDB}} service through the 
 
 ### Foundation Endpoint
 
-The foundation endpoint is composed of the region the service resides in and the service instance id. It will be at the start of every endpoint.
+The foundation endpoint is composed of the region the service resides in and the service instance ID. It is at the start of every endpoint.
 
 ### Deployment ID
 

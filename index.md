@@ -36,7 +36,7 @@ You can manage your service from the service dashboard. Here you can find inform
 
 For more information, see [Settings](./dashboard-settings.html).
 
-{{site.data.keyword.composeForMongoDB}} relies on Cloud Foundry roles to manage access to the service. Only users with the Developer role can see or use the service dashboard. For more information on Cloud Foundry roles, see the [Cloud Foundry access](https://{DomainName}/docs/iam/cfaccess.html#cfaccess) and the [Managing Cloud Foundry access](https://{DomainName}/docs/iam/mngcf.html#mngcf) pages.
+{{site.data.keyword.composeForMongoDB}} relies on Cloud Foundry roles to manage access to the service. Only users with the Developer role can see or use the service dashboard. For more information on Cloud Foundry roles, see the [Cloud Foundry access](https://{DomainName}/docs/iam/cfaccess.html#cfaccess) page and the [Managing Cloud Foundry access](https://{DomainName}/docs/iam/mngcf.html#mngcf) page.
 {: tip}
 
 ## Connecting to {{site.data.keyword.composeForMongoDB}}
@@ -53,4 +53,4 @@ If you want to connect to {{site.data.keyword.composeForMongoDB}} from outside {
 
 ## Creating a web application by using MEAN stack
 
-You can use {{site.data.keyword.composeForMongoDB}} as part of a MEAN stack to create a web application. Follow the steps in the [Modern Web Application using MEAN stack](/docs/tutorials/mean-stack.html) tutorial to create a web application composed of a Mongo DB, Express web framework, Angular front end framework, and a Node.js runtime.
+You can use {{site.data.keyword.composeForMongoDB}} as part of a MEAN stack to create a web application. Follow the steps in the [Modern Web Application using MEAN stack](/docs/tutorials/mean-stack.html) tutorial to create a web application composed of a Mongo DB, Express web framework, Angular front-end framework, and a Node.js runtime.

@@ -27,7 +27,6 @@ Field Name|Description
 ----------|-----------
 `uri`|The URI to be used when connecting to the service. The URI includes the schema (`mongodb:`), admin user name and password, host name of server, port number to connect to, database name, and `?ssl=true` to enable SSL connections.
 `uri_cli`|A `mongo` shell command line that connects to the database instance.
-`ca_certificate_base64`|A self-signed certificate that is used to confirm that an app is connecting to the appropriate server. The certificate is base64-encoded. You must decode the key before you use it, as shown in the sample app.
 `deployment_id`|An internal identifier for the service as created within Compose.
 `db_type`|The type of database that is offered by the service: in this case, `mongodb`.
 `name`|The database deployment name.

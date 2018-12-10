@@ -22,7 +22,7 @@ An {{site.data.keyword.composeForMongoDB_full}} service comes in a three data no
 
 All {{site.data.keyword.composeForMongoDB}} services all have encryption at rest. Your data resides on servers that have volume-level encryption enabled. 
 
-Because this is {{site.data.keyword.composeForMongoDB}} is a managed service, it is possible for {{site.data.keyword.cloud}} Compose operators to see data. In addition to the disk encryption, we recommend that if you are storing personal information that you encrypt information before storing it in the database or by using extensions or features to enable encryption on the database itself. While these methods might impact usability or performance, it is good practice to ensure that personal information is protected with encryption.
+Because {{site.data.keyword.composeForMongoDB}} is a managed service, it is possible for {{site.data.keyword.cloud}} Compose operators to see data. In addition to the disk encryption, we recommend that if you are storing personal information that you encrypt it before you store it in the database or by using extensions or features to enable encryption on the database itself. While these methods might impact usability or performance, it is good practice to ensure that personal information is protected with encryption.
 
 ## Auto-scaling
 
@@ -35,10 +35,10 @@ Auto-scaling does not scale down deployments where disk/memory usage has shrunk.
 
 ## The Admin database
 
-If you store data in the Admin database, it will not perform well and you risk data loss.
+If you store data in the Admin database, your deployment will not perform well and you risk data loss.
 
 Like other MongoDB installations, {{site.data.keyword.composeForMongoDB}} has an Admin database. The Admin database holds information about users and roles within the database along with various tracking collections. On a simple MongoDB installation, this information is stored along with the other data in the database. 
 
-On {{site.data.keyword.composeForMongoDB}}, a more resilient architecture uses MongoDB's sharded architecture. This involves sharing administration data between shards, which it achieves by creating another database cluster that contains the Admin database.
+On {{site.data.keyword.composeForMongoDB}}, a more resilient architecture uses MongoDB's sharded architecture. The administration data is shared between shards, which it achieves by creating another database cluster that contains the Admin database.
 
-This cluster Admin database is not built for scale and degrades rapidly when any quantity of data is stored in it. Therefore, it is imperative that you ensure applications do not write data to the Admin database.
+The cluster Admin database is not built for scale and degrades rapidly when any quantity of data is stored in it. Therefore, it is imperative that you ensure applications do not write data to the Admin database.
