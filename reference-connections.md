@@ -11,8 +11,8 @@ lastupdated: "2018-12-06"
 {:pre: .pre}
 {:tip: .tip}
 
-# Connection Configuration
-{: #connection-configuration}
+# Connection Architecture
+{: #connection-architecture}
 
 Database connections in MongoDB sharded clusters are handled by mongos routers. {{site.data.keyword.composeForMongoDB}} services come with two of these routers with 64 MB of memory each. HAProxy provides an avenue for secure TLS/SSL connections. Two portals allow for applications to maintain connectivity if one of the portals becomes unreachable.
 
@@ -25,7 +25,7 @@ Almost all MongoDB drivers handle multiple connection points but failover at the
 
 ## Encryption in Transit
 
-All {{site.data.keyword.composeForMongoDB}} HAProxy portals are TLS/SSL-enabled, and support TLS version 1.2. All deployments are issued [Let's Encrypt certificates](./connecting-certificates.html), which are part of most environment's certificate stores. Some older deployments have self-signed certificates. For these deployments you may need a local copy of the certificate for your service and to provide its location to your applications driver to make a secure connection.
+All {{site.data.keyword.composeForMongoDB}} HAProxy portals are TLS/SSL-enabled, and support TLS version 1.2. All deployments are issued [Let's Encrypt certificates](/docs/services/ComposeForMongoDB?topic=compose-for-mongodb-le-certificates), which are part of most environment's certificate stores. Some older deployments have self-signed certificates. For these deployments you may need a local copy of the certificate for your service and to provide its location to your applications driver to make a secure connection.
 
 ## Connection Limits
 

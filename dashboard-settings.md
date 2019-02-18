@@ -13,6 +13,7 @@ lastupdated: "2017-11-20"
 {:tip: .tip}
 
 # Settings
+{: #dashboard-settings}
 
 These features allow you to adapt your {{site.data.keyword.composeForMongoDB}} service to better suit your needs and requirements.
 

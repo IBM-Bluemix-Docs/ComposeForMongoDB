@@ -165,7 +165,7 @@ npm start
 
 The app is now running at [http://localhost:8080](http://localhost:8080). You can add words and definitions to your {{site.data.keyword.composeForMongoDB}} database. When you stop and restart the app, any words you have already added are displayed when you refresh the page.
 
-For information about the credentials you created for the application to connect to your service, see [Available Credentials](./connecting-bluemix-app.html#available-credentials).
+For information about the credentials you created for the application to connect to your service, see [Available Credentials](/docs/services/ComposeForMongoDB?topic=compose-for-mongodb-ibmcloud-cf-app).
 
 ## Next steps
 
@@ -173,8 +173,8 @@ To understand more about how the [sample app](https://github.com/IBM-Cloud/compo
 
 To start exploring your {{site.data.keyword.composeForMongoDB}} service, see the following topics about the service dashboard:
 
-- [Dashboard Overview](./dashboard-overview.html)
-- [Backups](./dashboard-backups.html)
-- [Settings](./dashboard-settings.html)
+- [Dashboard Overview](/docs/services/ComposeForMongoDB?topic=compose-for-mongodb-dashboard-overview)
+- [Backups](/docs/services/ComposeForMongoDB?topic=compose-for-mongodb-dashboard-backups)
+- [Settings](/docs/services/ComposeForMongoDB?topic=compose-for-mongodb-dashboard-settings)
 
 [ibm_cloud_signup_url]: https://ibm.biz/compose-for-mongodb-signup

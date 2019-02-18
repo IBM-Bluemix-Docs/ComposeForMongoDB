@@ -13,7 +13,7 @@ lastupdated: "2018-02-28"
 {:tip: .tip}
 
 # Backups
-{: #backups}
+{: #dashboard-backups}
 
 You can create and download backups from the _Backups_ tab of the _Manage_ page of your service dashboard. Daily, weekly, monthly, and on-demand backups are available. They are retained according to the following schedule:
 
@@ -86,7 +86,7 @@ Use the following steps to restore a backup to a new service instance.
 
 Use the following steps to restore a backup from a running service to a new service by using the {{site.data.keyword.cloud_notm}} CLI. 
 
-1. If you need to, [download and install it](https://{DomainName}/docs/cli/index.html#overview). 
+1. If you need to, [download and install it](/docs/cli?topic=cloud-cli-overview). 
 2. Find the backup that you would like to restore from on the _Backups_ page on your service and copy the backup ID.  
   **Or**  
   Use the `GET /2016-07/deployments/:id/backups` to find a backup and its ID through the Compose API. The Foundation Endpoint and the service instance ID are both shown in the service's _Overview_. For example,

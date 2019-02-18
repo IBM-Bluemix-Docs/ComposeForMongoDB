@@ -13,7 +13,7 @@ lastupdated: "2018-12-05"
 {:tip: .tip}
 
 # Connecting an external application
-{: #connecting-external-app}
+{: #external-app}
 
 There are two ways of connecting an external application to {{site.data.keyword.composeForMongoDB_full}}:
 
@@ -29,7 +29,7 @@ If you're looking for languages that are not see covered here, try the [MongoDB.
 
 ## Certificates
 
-All {{site.data.keyword.composeForMongoDB_full}} have TLS/SSL enabled and are issued Let's Encrypt certificates. CA-backed certificates are often supported by environments without any extra configuration steps. For the applications or drivers that don't have CA certificate support, see the [Let's Encrypt Certificates page](./connecting-certificates.html) and consult the specific language and driver documentation.
+All {{site.data.keyword.composeForMongoDB_full}} have TLS/SSL enabled and are issued Let's Encrypt certificates. CA-backed certificates are often supported by environments without any extra configuration steps. For the applications or drivers that don't have CA certificate support, see the [Let's Encrypt Certificates page](/docs/services/ComposeForMongoDB?topic=compose-for-mongodb-le-certificates) and consult the specific language and driver documentation.
 
 ## Go / Golang
 

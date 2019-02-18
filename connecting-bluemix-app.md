@@ -12,6 +12,7 @@ lastupdated: "2017-06-17"
 {:pre: .pre}
 
 # Connecting an {{site.data.keyword.cloud_notm}} application
+{: #ibmcloud-cf-app}
 
 To connect an {{site.data.keyword.cloud}} application to your service, use the service credentials that are created when the service is provisioned.
 

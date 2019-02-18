@@ -13,6 +13,7 @@ lastupdated: "2018-12-06"
 {:tip: .tip}
 
 # Let's Encrypt Certificates
+{: #le-certificates}
 
 All {{site.data.keyword.composeForMongoDB_full}} connections are TLS/SSL enabled and deployments are issued Let's Encrypt certificates. Some applications and drivers do not know how to use CA-backed certificates. If your driver or applications don't support CA-backed certificates, you need the root certificates from Let's Encrypt, saved as a `.pem` file. The two files that are needed can be found at [https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem.txt](https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem.txt) and [https://www.identrust.com/certificates/trustid/root-download-x3.html](https://www.identrust.com/certificates/trustid/root-download-x3.html). We concatenated them here for your ease of use but recommend for security that you download and concatenate your own into a file.
 

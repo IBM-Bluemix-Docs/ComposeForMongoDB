@@ -12,7 +12,7 @@ lastupdated: "2018-03-26"
 {:pre: .pre}
 
 # About {{site.data.keyword.composeForMongoDB}}
-{: #about-compose-for-mongodb}
+{: #about}
 
 {{site.data.keyword.composeForMongoDB_full}} uses the powerful indexing and querying, aggregation, and wide driver support of MongoDB that makes it the go-to JSON data store for many startups and enterprises. {{site.data.keyword.composeForMongoDB}} offers an easy, auto-scaling deployment system. It delivers high availability and redundancy, automated and on-demand no-stop backups, monitoring tools, integration into alert systems, performance analysis views, and more, in a clean, simple user interface.
 {:shortdesc}
@@ -34,9 +34,9 @@ You can manage your service from the service dashboard. Here you can find inform
 - Allocate more resources for your service
 - Use whitelists to restrict access to your databases. 
 
-For more information, see [Settings](./dashboard-settings.html).
+For more information, see [Settings](/docs/services/ComposeForMongoDB?topic=compose-for-mongodb-dashboard-settings).
 
-{{site.data.keyword.composeForMongoDB}} relies on Cloud Foundry roles to manage access to the service. Only users with the Developer role can see or use the service dashboard. For more information on Cloud Foundry roles, see the [Cloud Foundry access](https://{DomainName}/docs/iam/cfaccess.html#cfaccess) page and the [Managing Cloud Foundry access](https://{DomainName}/docs/iam/mngcf.html#mngcf) page.
+{{site.data.keyword.composeForMongoDB}} relies on Cloud Foundry roles to manage access to the service. Only users with the Developer role can see or use the service dashboard. For more information on Cloud Foundry roles, see the [Cloud Foundry access](/docs/iam?topic=iam-cfaccess#cfaccess) page and the [Managing Cloud Foundry access](/docs/iam?topic=iam-mngcf#mngcf) page.
 {: tip}
 
 ## Connecting to {{site.data.keyword.composeForMongoDB}}
@@ -45,11 +45,11 @@ You can connect to your service by using the credentials that are created along 
 
 ## Connecting an {{site.data.keyword.cloud_notm}} application to {{site.data.keyword.composeForMongoDB}}
 
-To connect an {{site.data.keyword.cloud_notm}} application to your service, use the credentials that are created along with the service. You can find information on how to connect an {{site.data.keyword.cloud_notm}} application to a {{site.data.keyword.composeForMongoDB}} service in [Connecting an {{site.data.keyword.cloud_notm}} Application](./connecting-bluemix-app.html).
+To connect an {{site.data.keyword.cloud_notm}} application to your service, use the credentials that are created along with the service. You can find information on how to connect an {{site.data.keyword.cloud_notm}} application to a {{site.data.keyword.composeForMongoDB}} service in [Connecting an {{site.data.keyword.cloud_notm}} Application](/docs/services/ComposeForMongoDB?topic=compose-for-mongodb-ibmcloud-cf-app).
 
 ## Connecting to {{site.data.keyword.composeForMongoDB}} from outside {{site.data.keyword.cloud_notm}}
 
-If you want to connect to {{site.data.keyword.composeForMongoDB}} from outside {{site.data.keyword.cloud_notm}}, you can use the provided connection strings or command line. You can find information on how to connect in [Connecting an external application](./connecting-external.html).
+If you want to connect to {{site.data.keyword.composeForMongoDB}} from outside {{site.data.keyword.cloud_notm}}, you can use the provided connection strings or command line. You can find information on how to connect in [Connecting an external application](/docs/services/ComposeForMongoDB?topic=compose-for-mongodb-connecting-external).
 
 ## Creating a web application by using MEAN stack
 
