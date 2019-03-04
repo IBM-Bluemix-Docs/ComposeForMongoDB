@@ -91,19 +91,18 @@ The {{site.data.keyword.cloud_notm}} CLI tool is what you use to communicate wit
 {{site.data.keyword.cloud_notm}} uses a manifest file - `manifest.yml` to associate an application with a service. Follow these steps to create your manifest file.
 
 1. In an editor, open a new file and add the following:
+  ```
+  ---
+  applications:
+  - name: compose-mongodb-helloworld-nodejs
+  routes:
+    - route: compose-mongodb-helloworld-node-js.us-south.cf.appdomain.cloud
+  memory:  128M
+  services:
+    - compose-for-mongodb-service
+  ```
 
-```
----
- applications:
- - name: compose-mongodb-helloworld-nodejs
-   routes:
-   - route: a-name-for-the-host.mybluemix.net
-   memory:  128M
-   services:
-- my-compose-for-mongodb-service
-```
-
-2. Change the `route` value. This will be the sub-domain your app will appear on. This could simply be the app name plus `.mybluemix.net`, or if in another region, `.regionid.mybluemix.net` e.g. `.eu-gb.mybluemix.net`.
+2. Change the `route` value to something unique. The route that you choose determines the subdomain of your application's URL: `<route>.{region}.cf.appdomain.cloud`. Be sure the `{region}` matches where your application is deployed.
 3. Change the `name` value. The value that you choose is displayed in your {{site.data.keyword.cloud_notm}} dashboard.
 4. Update the `services` value to match the name of the service you created in [Create a {{site.data.keyword.composeForMongoDB}} service instance](#create-service). 
 
@@ -127,7 +126,7 @@ If your application is not listed, repeat Steps 7 and 8, making sure that you ha
 
 ## Step 9. Use the app
 
-Now, when you visit `<host>.mybluemmix.net` you can see the contents of your {{site.data.keyword.composeForMongoDB}} collection. As you add words and their definitions, they are added to the database and displayed. If you stop and restart the app, any words and definitions you've already added are now listed.
+Now, when you visit `<route>.{region}.cf.appdomain.cloud` you can see the contents of your {{site.data.keyword.composeForMongoDB}} collection. As you add words and their definitions, they are added to the database and displayed. If you stop and restart the app, any words and definitions you've already added are now listed.
 
 ## Run the App Locally
 
