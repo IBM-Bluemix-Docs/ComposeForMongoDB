@@ -3,6 +3,9 @@
 copyright:
   years: 2016,2018
 lastupdated: "2018-12-07"
+
+subcollection: compose-for-mongodb
+
 ---
 
 {:shortdesc: .shortdesc}

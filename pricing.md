@@ -3,6 +3,9 @@
 copyright:
   years: 2016,2018
 lastupdated: "2018-01-03"
+
+subcollection: compose-for-mongodb
+
 ---
 
 {:new_window: target="_blank"}
