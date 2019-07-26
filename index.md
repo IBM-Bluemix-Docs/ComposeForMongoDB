@@ -4,6 +4,8 @@ copyright:
   years: 2016,2018
 lastupdated: "2018-03-26"
 
+keywords: mongodb, compose
+
 subcollection: compose-for-mongodb
 
 ---

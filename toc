@@ -27,6 +27,7 @@ Compose For MongoDB
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
+	[The IBM Cloud Compose API](https://www.compose.com/articles/the-ibm-cloud-compose-api)
 	reference-versions.md
 	reference-architecture.md
 	reference-connections.md
