@@ -34,4 +34,4 @@ When a new version is made available, its release is announced and it is availab
 The list of versions available to provision is on the {{site.data.keyword.composeForMongoDB}} [catalog page](https://{DomainName}/catalog/services/compose-for-mongodb).
 
 To get a current list of available versions for your {{site.data.keyword.composeForMongoDB}} service, you can use the 
-[GET /2016-07/deployments/:id/versions](https://apidocs.compose.com/v1.0/reference#2016-07-get-deployments-versions) endpoint.
+[GET /2016-07/deployments/:id/versions](https://apidocs.compose.com/reference#2016-07-get-deployments-versions) endpoint.

@@ -41,7 +41,7 @@ All {{site.data.keyword.composeForMongoDB_full}} have TLS/SSL enabled and are is
 As in the other examples, this document assumes an environmental variable called `MONGODB_URL` with your connection string.  To set this variable, execute the following in the shell:
 
 ```shell
-export MONGODB_URL="mongodb://user:pass@server.compose.io/db_name"
+export MONGODB_URL="mongodb://user:pass@server.compose.com/db_name"
 ```
 
 The mgo driver is the standard mongo driver for go, and can be installed by:

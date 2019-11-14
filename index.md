@@ -26,11 +26,11 @@ subcollection: compose-for-mongodb
 
 ## Creating a {{site.data.keyword.composeForMongoDB}} service instance
 
-You can create a {{site.data.keyword.composeForMongoDB}} service from the [{{site.data.keyword.composeForMongoDB}} page](https://{DomainName}/catalog/services/compose-for-mongodb/) in the {{site.data.keyword.cloud_notm}} catalog.
+You can create a {{site.data.keyword.composeForMongoDB}} service from the [{{site.data.keyword.composeForMongoDB}} page](https://{DomainName}/catalog/services/compose-for-mongodb) in the {{site.data.keyword.cloud_notm}} catalog.
 
 Choose a service name, and a region, organization, and space to provision the service in. You can use the **Select a database version** field to choose from the available database versions.
 
-When you provision your {{site.data.keyword.composeForMongoDB}} instance, you can choose the *Standard* or *Enterprise* plans. With the *Enterprise* plan, you can provision your {{site.data.keyword.composeForMongoDB}} instance into an available {{site.data.keyword.composeEnterprise}} cluster. {{site.data.keyword.composeEnterprise}} provides the security and isolation that is required by enterprise compliance and uses dedicated networking to ensure the performance of the deployed databases. See the [{{site.data.keyword.composeEnterprise}} documentation](/docs/services/ComposeEnterprise/index.html) for more details.
+When you provision your {{site.data.keyword.composeForMongoDB}} instance, you can choose the *Standard* or *Enterprise* plans. With the *Enterprise* plan, you can provision your {{site.data.keyword.composeForMongoDB}} instance into an available {{site.data.keyword.composeEnterprise}} cluster. {{site.data.keyword.composeEnterprise}} provides the security and isolation that is required by enterprise compliance and uses dedicated networking to ensure the performance of the deployed databases. See the [{{site.data.keyword.composeEnterprise}} documentation](/docs/services/ComposeEnterprise?topic=compose-enterprise-about) for more details.
 
 ## Managing {{site.data.keyword.composeForMongoDB}}
 
@@ -58,4 +58,4 @@ If you want to connect to {{site.data.keyword.composeForMongoDB}} from outside {
 
 ## Creating a web application by using MEAN stack
 
-You can use {{site.data.keyword.composeForMongoDB}} as part of a MEAN stack to create a web application. Follow the steps in the [Modern Web Application using MEAN stack](/docs/tutorials/mean-stack.html) tutorial to create a web application composed of a Mongo DB, Express web framework, Angular front-end framework, and a Node.js runtime.
+You can use {{site.data.keyword.composeForMongoDB}} as part of a MEAN stack to create a web application. Follow the steps in the [Modern Web Application using MEAN stack](/docs/tutorials?topic=solution-tutorials-mean-stack) tutorial to create a web application composed of a Mongo DB, Express web framework, Angular front-end framework, and a Node.js runtime.
