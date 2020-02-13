@@ -25,6 +25,8 @@ Compose For MongoDB
 		connecting-bluemix-app.md
 		connecting-external.md
 		connecting-certificates.md
+
+	howto-migrating.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
