@@ -20,7 +20,7 @@ subcollection: compose-for-mongodb
 
 # Migrating to Databases for MongoDB
 
-To ease the transition from {{site.data.keyword.composeForMongoDB}} to {{site.data.keyword.databases-for-mongodb_full}}, use the migration tool available on your {{site.data.keyword.databases-for-mongodb}} deployment. The tool moves both your data and indexes to a new {{site.data.keyword.databases-for-mongodb}} deployment.
+To ease the transition from {{site.data.keyword.composeForMongoDB}} to {{site.data.keyword.databases-for-mongodb_full}}, use the migration tool available on your {{site.data.keyword.composeForMongoDB}} deployment. The tool moves both your data and indexes to a new {{site.data.keyword.databases-for-mongodb}} deployment.
 
 Migrations are repeatable. You can perform a single migration to a new {{site.data.keyword.databases-for-mongodb}} deployment, test it out, tear it down, and then perform another migration. In the meantime, your applications can continue running on your {{site.data.keyword.composeForMongoDB}} deployment.
 
