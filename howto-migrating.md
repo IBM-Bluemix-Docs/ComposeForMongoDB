@@ -20,15 +20,11 @@ subcollection: compose-for-mongodb
 
 # Migrating to Databases for MongoDB
 
-To ease the transition from {{site.data.keyword.composeForMongoDB_full}} to {{site.data.keyword.databases-for-mongodb_full}}, use the migration tool available on your {{site.data.keyword.databases-for-mongodb}} deployment. 
+To ease the transition from {{site.data.keyword.composeForMongoDB}} to {{site.data.keyword.databases-for-mongodb_full}}, use the migration tool available on your {{site.data.keyword.databases-for-mongodb}} deployment. The tool moves both your data and indexes to a new {{site.data.keyword.databases-for-mongodb}} deployment.
 
 Migrations are repeatable. You can perform a single migration to a new {{site.data.keyword.databases-for-mongodb}} deployment, test it out, tear it down, and then perform another migration. In the meantime, your applications can continue running on your {{site.data.keyword.composeForMongoDB}} deployment.
 
-All migrations are hosted on Softlayer in the `us-south` region. The migration provisions a custom service that reads from your source database and writes to your destination database. This service is stateless and will terminate when the migration is complete.
-
-If tailing is enabled, then the migration service will persist a transaction log on disk. This log guarantees a reliable migration that will successfully resume in the event of an interruption. The transaction log lasts the duration of the migration and then is deleted.
-
-If you are migrating a {{site.data.keyword.composeForMongoDB}} deployment in the `eu-de` region, you may not be able to use this tool.  If you have any questions, please [contact support](https://cloud.ibm.com/unifiedsupport/cases). 
+All migrations are hosted on Softlayer in the `us-south` region. The migration provisions a custom service that reads from your source database and writes to your destination database. This service is stateless and will terminate when the migration is complete. If tailing is enabled, then the migration service will persist a transaction log on disk. This log guarantees a reliable migration that will successfully resume in the event of an interruption. The transaction log lasts the duration of the migration and then is deleted. If you are migrating a {{site.data.keyword.composeForMongoDB}} deployment in the `eu-de` region, you may not be able to use this tool.  If you have any questions, please [contact support](https://cloud.ibm.com/unifiedsupport/cases). 
 
 ## Setting up a Migration
 
