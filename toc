@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="compose-for-mongodb" audience="service" category="databases" arm="3663057" href="/docs/services/ComposeForMongoDB/index.html" path="services/ComposeForMongoDB"}
+{: .toc subcollection="compose-for-mongodb" audience="service" category="databases" href="/docs/ComposeForMongoDB?topic=compose-for-mongodb-about" path="ComposeForMongoDB"}
 Compose For MongoDB
 
 	{: .navgroup id="learn"}
