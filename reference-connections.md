@@ -30,7 +30,7 @@ Almost all MongoDB drivers handle multiple connection points but failover at the
 
 ## Encryption in Transit
 
-All {{site.data.keyword.composeForMongoDB}} HAProxy portals are TLS/SSL-enabled, and support TLS version 1.2. All deployments are issued [Let's Encrypt certificates](/docs/services/ComposeForMongoDB?topic=compose-for-mongodb-le-certificates), which are part of most environment's certificate stores. Some older deployments have self-signed certificates. For these deployments you may need a local copy of the certificate for your service and to provide its location to your applications driver to make a secure connection.
+All {{site.data.keyword.composeForMongoDB}} HAProxy portals are TLS/SSL-enabled, and support TLS version 1.2. All deployments are issued [Let's Encrypt certificates](/docs/ComposeForMongoDB?topic=compose-for-mongodb-le-certificates), which are part of most environment's certificate stores. Some older deployments have self-signed certificates. For these deployments you may need a local copy of the certificate for your service and to provide its location to your applications driver to make a secure connection.
 
 ## Connection Limits
 

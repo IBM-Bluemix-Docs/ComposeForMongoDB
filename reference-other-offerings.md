@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2016,2018
-lastupdated: "2018-06-08"
+  years: 2016,2020
+lastupdated: "2020-04-13"
 
 keywords: mongodb, compose
 
@@ -15,11 +15,13 @@ subcollection: compose-for-mongodb
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:important: .important}
 
 # Other Offerings
 {: #other-offerings}
 
-{{site.data.keyword.composeForMongoDB_full}} offers production-ready, autoscaling, highly available databases.
+{{site.data.keyword.composeForMongoDB_full}} is no longer the latest service offering. The next generation is [{{site.data.keyword.databases-for-mongodb_full}}](/docs/databases-for-mongodb?topic=databases-for-mongodb-getting-started).
+{: .important}
 
 Compose continues to operate as part of IBM from [https://www.compose.com/](https://www.compose.com). In addition to the documentation available on {{site.data.keyword.cloud_notm}}, Compose documentation is available at [https://help.compose.com/](https://help.compose.com/).
 
@@ -33,4 +35,4 @@ More useful database-related information is in the [Compose Articles](https://ww
 
 When you have a {{site.data.keyword.composeEnterprise}} cluster, selecting the {{site.data.keyword.composeForMongoDB}} service with the Enterprise plan provisions the service onto your dedicated cluster. 
 
-More information is available on the [{{site.data.keyword.composeEnterprise}} catalog page](https://{DomainName}/catalog/services/compose-enterprise) and [{{site.data.keyword.composeEnterprise}} documentation](https://{DomainName}/docs/services/ComposeEnterprise/index.html).
+More information is available on the [{{site.data.keyword.composeEnterprise}} catalog page](https://{DomainName}/catalog/compose-enterprise) and [{{site.data.keyword.composeEnterprise}} documentation](https://{DomainName}/docs/ComposeEnterprise/index.html).

@@ -19,6 +19,7 @@ subcollection: compose-for-mongodb
 
 
 # Migrating to Databases for MongoDB
+{: #migrating}
 
 To ease the transition from {{site.data.keyword.composeForMongoDB}} to {{site.data.keyword.databases-for-mongodb_full}}, use the migration tool available on your {{site.data.keyword.composeForMongoDB}} deployment. The tool moves both your data and indexes to a new {{site.data.keyword.databases-for-mongodb}} deployment.
 
@@ -28,12 +29,12 @@ All migrations are hosted on Softlayer in the `us-south` region. The migration p
 
 ## Setting up a Migration
 
-Create a new {{site.data.keyword.databases-for-mongodb}} deployment from the [catalog page](https://cloud.ibm.com/catalog/services/databases-for-mongodb). Make sure that you provision or the disk and memory for your {{site.data.keyword.databases-for-mongodb}} deployment to at least the same as your Compose for MongoDB deployment before provisioning. If your {{site.data.keyword.databases-for-mongodb}} deployment does not have enough resources, the migration will fail. 
+Create a new {{site.data.keyword.databases-for-mongodb}} deployment from the [catalog page](https://cloud.ibm.com/catalog/databases-for-mongodb). Make sure that you provision or the disk and memory for your {{site.data.keyword.databases-for-mongodb}} deployment to at least the same as your Compose for MongoDB deployment before provisioning. If your {{site.data.keyword.databases-for-mongodb}} deployment does not have enough resources, the migration will fail. 
 
 The default major version on IBM Cloud is MongoDB 4.x. You CAN use migrate and upgrade to version 4.x, but you should ensure that your application is compatible before doing so. Otherwise, you can provision version 3.x on IBM Cloud.
 {: .tip}
 
-Once the deployment is available, [set its admin password](/docs/services/databases-for-mongodb?topic=databases-for-mongodb-admin-password). Use the connection string and the admin username and password to perform the migration.
+Once the deployment is available, [set its admin password](/docs/databases-for-mongodb?topic=databases-for-mongodb-admin-password). Use the connection string and the admin username and password to perform the migration.
 
 ## Performing the Migration
 
@@ -64,7 +65,7 @@ Tailing will run until you stop it or for 3 days. Once you stop the tailing, or 
 
 ## Differences between {{site.data.keyword.databases-for-mongodb}} and Compose for MongoDB
 
-- Databases for MongoDB does NOT autoscale by default. You can [monitor](/docs/services/databases-for-mongodb?topic=cloud-databases-monitoring) your resources and [manually scale](/docs/services/databases-for-mongodb?topic=databases-for-mongodb-resources-scaling) to your usage. You can also [configure autoscaling](/docs/services/databases-for-mongodb?topic=databases-for-mongodb-autoscaling) on your deployment post-provision.
+- Databases for MongoDB does NOT autoscale by default. You can [monitor](/docs/databases-for-mongodb?topic=cloud-databases-monitoring) your resources and [manually scale](/docs/databases-for-mongodb?topic=databases-for-mongodb-resources-scaling) to your usage. You can also [configure autoscaling](/docs/databases-for-mongodb?topic=databases-for-mongodb-autoscaling) on your deployment post-provision.
 
 - The {{site.data.keyword.databases-for-mongodb}} connection string uses a format with two endpoints and a replica set name. You should check that your application's driver can use this format, as some application drivers need the replica set name passed in separately.
 
@@ -72,7 +73,7 @@ Tailing will run until you stop it or for 3 days. Once you stop the tailing, or 
 
 - The default database for a {{site.data.keyword.databases-for-mongodb}}deployment is `ibmclouddb`. If you did not change the database name in the connection string when you copied it into the Destination field, your data is in the `ibmclouddb` database.
 
-- Disk functions differently in {{site.data.keyword.databases-for-mongodb}}. In addition to the amount of data storage, the disk space allocation also impacts the amount of Input/Output Operations per Second (IOPS) that the disk is given. You receive 10 IOPS per GB of allocated disk and IOPS affects read/write throughput of the underlying database’s disk. If you notice performance differences from your {{site.data.keyword.composeForMongoDB}} deployment, check your disk I/O utilization on {{site.data.keyword.databases-for-mongodb}} with the [Monitoring integration](/docs/services/databases-for-mongodb?topic=cloud-databases-monitoring).
+- Disk functions differently in {{site.data.keyword.databases-for-mongodb}}. In addition to the amount of data storage, the disk space allocation also impacts the amount of Input/Output Operations per Second (IOPS) that the disk is given. You receive 10 IOPS per GB of allocated disk and IOPS affects read/write throughput of the underlying database’s disk. If you notice performance differences from your {{site.data.keyword.composeForMongoDB}} deployment, check your disk I/O utilization on {{site.data.keyword.databases-for-mongodb}} with the [Monitoring integration](/docs/databases-for-mongodb?topic=cloud-databases-monitoring).
 
 - If you are interested in migrating to {{site.data.keyword.databases-for-mongodb}} from a Compose Enterprise environment, look into provisioning your {{site.data.keyword.databases-for-mongodb}} deployment with dedicated cores. Allocating dedicated cores to your database deployment will introduce hypervisor-level isolation to your database instance, ensuring your data processing and RAM remain separated from other customers. It also provides a guaranteed minimum amount of Cores to your database deployment. Databases with allocated dedicated cores, deployed in the same Resource Group and IBM Cloud Region, may share a hypervisor.
 

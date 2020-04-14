@@ -34,7 +34,7 @@ If you're looking for languages that are not see covered here, try the [MongoDB.
 
 ## Certificates
 
-All {{site.data.keyword.composeForMongoDB_full}} have TLS/SSL enabled and are issued Let's Encrypt certificates. CA-backed certificates are often supported by environments without any extra configuration steps. For the applications or drivers that don't have CA certificate support, see the [Let's Encrypt Certificates page](/docs/services/ComposeForMongoDB?topic=compose-for-mongodb-le-certificates) and consult the specific language and driver documentation.
+All {{site.data.keyword.composeForMongoDB_full}} have TLS/SSL enabled and are issued Let's Encrypt certificates. CA-backed certificates are often supported by environments without any extra configuration steps. For the applications or drivers that don't have CA certificate support, see the [Let's Encrypt Certificates page](/docs/ComposeForMongoDB?topic=compose-for-mongodb-le-certificates) and consult the specific language and driver documentation.
 
 ## Go / Golang
 
