@@ -6,7 +6,7 @@ lastupdated: "2018-05-07"
 
 keywords: mongodb, compose
 
-subcollection: compose-for-mongodb
+subcollection: ComposeForMongoDB
 
 ---
 
@@ -29,7 +29,7 @@ The _Deployment Details_ panel shows details of your service.
 
 ### Type
 
-The type of database that is offered by the service, and the database version that your service uses. If a more recent database version is available, a notification is displayed, together with a link to the [Upgrade version](/docs/ComposeForMongoDB?topic=compose-for-mongodb-dashboard-settings#upgrade-version) section of your service dashboard.
+The type of database that is offered by the service, and the database version that your service uses. If a more recent database version is available, a notification is displayed, together with a link to the [Upgrade version](/docs/ComposeForMongoDB?topic=ComposeForMongoDB-dashboard-settings#upgrade-version) section of your service dashboard.
 
 ### ID
 
@@ -45,7 +45,7 @@ Making administrative changes to your service (such as scaling, or taking a manu
 
 ## Connection Strings
 
-You can find available connection strings for your service in a set of tabs in the _Connection Strings_ panel. You can find out how to use the connection strings to connect to your service in [Connecting an external application](/docs/ComposeForMongoDB?topic=compose-for-mongodb-external-app).
+You can find available connection strings for your service in a set of tabs in the _Connection Strings_ panel. You can find out how to use the connection strings to connect to your service in [Connecting an external application](/docs/ComposeForMongoDB?topic=ComposeForMongoDB-external-app).
 
 ### HTTPS
 
@@ -61,7 +61,7 @@ export MONGODB_URL="<CONNECTION STRING>"
 
 ### Command Line
 
-The **Command Line** is a preformatted command, which invokes `mongo` with the correct parameters. To use it, you need the Mongo tools installed on the local system. You can find out more in [Connecting an external application](/docs/ComposeForMongoDB?topic=compose-for-mongodb-external-app).
+The **Command Line** is a preformatted command, which invokes `mongo` with the correct parameters. To use it, you need the Mongo tools installed on the local system. You can find out more in [Connecting an external application](/docs/ComposeForMongoDB?topic=ComposeForMongoDB-external-app).
 
 ### SSL Certificate
 

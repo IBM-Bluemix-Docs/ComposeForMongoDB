@@ -4,7 +4,7 @@ copyright:
   years: 2016,2020
 lastupdated: "2020-04-13"
 
-subcollection: compose-for-mongodb
+subcollection: ComposeForMongoDB
 
 ---
 
@@ -172,7 +172,7 @@ npm start
 
 The app is now running at [http://localhost:8080](http://localhost:8080). You can add words and definitions to your {{site.data.keyword.composeForMongoDB}} database. When you stop and restart the app, any words you have already added are displayed when you refresh the page.
 
-For information about the credentials you created for the application to connect to your service, see [Available Credentials](/docs/ComposeForMongoDB?topic=compose-for-mongodb-ibmcloud-cf-app).
+For information about the credentials you created for the application to connect to your service, see [Available Credentials](/docs/ComposeForMongoDB?topic=ComposeForMongoDB-ibmcloud-cf-app).
 
 ## Next steps
 
@@ -180,8 +180,8 @@ To understand more about how the [sample app](https://github.com/IBM-Cloud/compo
 
 To start exploring your {{site.data.keyword.composeForMongoDB}} service, see the following topics about the service dashboard:
 
-- [Dashboard Overview](/docs/ComposeForMongoDB?topic=compose-for-mongodb-dashboard-overview)
-- [Backups](/docs/ComposeForMongoDB?topic=compose-for-mongodb-dashboard-backups)
-- [Settings](/docs/ComposeForMongoDB?topic=compose-for-mongodb-dashboard-settings)
+- [Dashboard Overview](/docs/ComposeForMongoDB?topic=ComposeForMongoDB-dashboard-overview)
+- [Backups](/docs/ComposeForMongoDB?topic=ComposeForMongoDB-dashboard-backups)
+- [Settings](/docs/ComposeForMongoDB?topic=ComposeForMongoDB-dashboard-settings)
 
 [ibm_cloud_signup_url]: https://ibm.biz/compose-for-mongodb-signup

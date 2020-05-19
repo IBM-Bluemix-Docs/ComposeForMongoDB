@@ -6,7 +6,7 @@ lastupdated: "2020-02-12"
 
 keywords: mongodb, compose, migrating, 
 
-subcollection: compose-for-mongodb
+subcollection: ComposeForMongoDB
 
 ---
 

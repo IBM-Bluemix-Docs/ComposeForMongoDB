@@ -6,7 +6,7 @@ lastupdated: "2018-01-03"
 
 keywords: mongodb, compose
 
-subcollection: compose-for-mongodb
+subcollection: ComposeForMongoDB
 
 ---
 
