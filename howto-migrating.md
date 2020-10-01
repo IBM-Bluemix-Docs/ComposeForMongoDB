@@ -36,6 +36,9 @@ The default major version on IBM Cloud is MongoDB 4.x. You CAN use migrate and u
 
 Once the deployment is available, [set its admin password](/docs/databases-for-mongodb?topic=databases-for-mongodb-admin-password). Use the connection string and the admin username and password to perform the migration.
 
+**Important!** After you have successfully completed your migration to {{site.data.keyword.databases-for-mongodb_full}}, remember to change your password again, following the same link as above. This helps ensure that the password used for the migration cannot be reused in any way.
+{: .note}
+
 ## Performing the Migration
 
 In the _Migrations_ tab of your {{site.data.keyword.composeForMongoDB}} deployment, start a new migration by clicking **Create Migration**.
