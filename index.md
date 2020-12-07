@@ -60,7 +60,7 @@ To connect an {{site.data.keyword.cloud_notm}} application to your service, use 
 
 ## Connecting to {{site.data.keyword.composeForMongoDB}} from outside {{site.data.keyword.cloud_notm}}
 
-If you want to connect to {{site.data.keyword.composeForMongoDB}} from outside {{site.data.keyword.cloud_notm}}, you can use the provided connection strings or command line. You can find information on how to connect in [Connecting an external application](/docs/ComposeForMongoDB?topic=ComposeForMongoDB-connecting-external).
+If you want to connect to {{site.data.keyword.composeForMongoDB}} from outside {{site.data.keyword.cloud_notm}}, you can use the provided connection strings or command line. You can find information on how to connect in [Connecting an external application](docs/ComposeForMongoDB?topic=ComposeForMongoDB-external-app).
 
 ## Creating a web application by using MEAN stack
 
